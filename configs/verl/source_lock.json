@@ -1,0 +1,8 @@
+{
+  "kind": "local_verl_v1_snapshot",
+  "verl_source": {
+    "sha256": "5e6bb1623640644d88ac47c8538dea2423d36b715e32ed435e8039bbb8fba60a",
+    "file_count": 415
+  },
+  "note": "No Git revision is available. Freeze source + config + pyproject + uv.lock contents."
+}

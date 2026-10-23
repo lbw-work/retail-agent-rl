@@ -1,0 +1,98 @@
+{
+  "database": "data/databases/tau2_retail_new_db_4.json",
+  "database_sha256": "00b2095d6351c958b546561f791663c413e83346b1becf59cd55a1c3a49b749b",
+  "product": {
+    "name": "Running Shoes",
+    "product_id": "6938111410",
+    "variants": {
+      "4153505238": {
+        "item_id": "4153505238",
+        "options": {
+          "size": "8",
+          "color": "red",
+          "material": "leather",
+          "sole": "EVA"
+        },
+        "available": true,
+        "price": 158.67
+      },
+      "1775591963": {
+        "item_id": "1775591963",
+        "options": {
+          "size": "10",
+          "color": "white",
+          "material": "leather",
+          "sole": "EVA"
+        },
+        "available": true,
+        "price": 154.75
+      },
+      "9635758562": {
+        "item_id": "9635758562",
+        "options": {
+          "size": "9",
+          "color": "white",
+          "material": "mesh",
+          "sole": "rubber"
+        },
+        "available": true,
+        "price": 148.95
+      },
+      "9791469541": {
+        "item_id": "9791469541",
+        "options": {
+          "size": "9",
+          "color": "yellow",
+          "material": "synthetic",
+          "sole": "rubber"
+        },
+        "available": true,
+        "price": 147.05
+      },
+      "4107812777": {
+        "item_id": "4107812777",
+        "options": {
+          "size": "9",
+          "color": "black",
+          "material": "synthetic",
+          "sole": "rubber"
+        },
+        "available": true,
+        "price": 155.33
+      }
+    }
+  },
+  "size10_red_available": [],
+  "size10_all_variants": [
+    {
+      "item_id": "1775591963",
+      "options": {
+        "size": "10",
+        "color": "white",
+        "material": "leather",
+        "sole": "EVA"
+      },
+      "available": true,
+      "price": 154.75
+    }
+  ],
+  "reference_write": [
+    {
+      "action_id": "retail_train_953_5",
+      "name": "modify_pending_order_items",
+      "arguments": {
+        "new_item_ids": [
+          "9385662952",
+          "1775591963"
+        ],
+        "payment_method_id": "credit_card_9182736",
+        "item_ids": [
+          "4728397765",
+          "4153505238"
+        ],
+        "order_id": "#W7926664"
+      },
+      "info": null
+    }
+  ]
+}

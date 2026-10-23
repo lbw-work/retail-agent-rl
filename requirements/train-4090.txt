@@ -1,0 +1,4 @@
+# Linux / RTX 4090。先从 PyTorch cu128 源安装 torch，再安装本文件。
+-r train.txt
+bitsandbytes==0.48.1
+liger-kernel==0.6.4

@@ -1,0 +1,59 @@
+{
+  "task_id": "retail_136",
+  "session_id": 0,
+  "seed": 42,
+  "termination": "completed",
+  "diagnostic": null,
+  "assistant_actions": 17,
+  "generations": 17,
+  "format_retries": 0,
+  "business_tool_calls": 10,
+  "tool_errors": [],
+  "generated_tokens": 2323,
+  "customer_api_requests": 7,
+  "scores": {
+    "version": "business_subset_v2_us_country",
+    "task_id": "retail_136",
+    "termination": "completed",
+    "business_reward": 0.0,
+    "gate": 1.0,
+    "violations": [],
+    "goal_count": 2,
+    "completed_goals": [],
+    "progress": 0.0,
+    "reward_a": 0.0,
+    "reward_b": 0.0,
+    "partial_weight": 0.3,
+    "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+    "training_business_reward": 0.0
+  },
+  "successful_write_targets": [
+    [
+      "exchange_delivered_order_items",
+      "#W2151985"
+    ],
+    [
+      "exchange_delivered_order_items",
+      "#W6544264"
+    ]
+  ],
+  "missing_goal_targets": [],
+  "final_db_vs_reference": [
+    {
+      "path": "/orders/#W2151985/exchange_payment_method_id",
+      "actual": "gift_card_9912345",
+      "expected": "credit_card_8834521"
+    },
+    {
+      "path": "/orders/#W6544264/exchange_payment_method_id",
+      "actual": "gift_card_9912345",
+      "expected": "credit_card_8834521"
+    }
+  ],
+  "exact_score_match": true,
+  "exact_tool_and_database_replay": true,
+  "unique_call_ids": true,
+  "raw_token_fidelity": true,
+  "trace_folder": "retail_136/trajectory_0",
+  "transcript": "retail_136/trajectory_0/完整对话与工具调用.txt"
+}

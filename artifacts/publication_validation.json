@@ -1,0 +1,72 @@
+{
+  "release": "v0.1.0-development-snapshot",
+  "date": "2026-10-23",
+  "validation": {
+    "core_and_artifact_unit_tests": 32,
+    "test_result": "passed",
+    "clean_export_tested": true,
+    "runtime_environment": "existing Python 3.12 macOS audit environment; not a new pip install",
+    "frozen_baseline_protocol": "passed",
+    "community_existing_converted_model_hashes": "passed",
+    "restored_verl_fingerprint": "passed",
+    "readme_local_links": "passed",
+    "github_markdown_render": "6 tables and Mermaid block rendered by GitHub markdown API; browser diagram layout not visually inspected",
+    "artifact_transport": "2 MiB parts, part hashes and complete archive hash verified",
+    "hf_remote_part_hashes_verified": 37,
+    "hf_dataset_revision": "c9cf70530d9547b2b7a55967f39ee674694e745c",
+    "hf_actual_download_and_verl_restore": "passed"
+  },
+  "not_executed": [
+    "new paid customer API sampling",
+    "training",
+    "fresh 8 GiB model download and a second full MLX conversion",
+    "fresh Linux CUDA install or GPU memory benchmark"
+  ],
+  "state_changes": {
+    "business_tools_modified": false,
+    "scorer_modified": false,
+    "frozen_task_rows_modified": false,
+    "original_scores_preserved": true
+  },
+  "results": {
+    "retail_174": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "retail_113": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "retail_135": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "retail_136": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "retail_145": [
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  "data_scope": "Selected TRAIN diagnostics. Not held-out benchmark accuracy. Community checkpoint training belongs to upstream.",
+  "source_sha256": {
+    "src/retail_agent/environment.py": "1f21ec5e41c96802c770e94ef9f4415f62bcb0e206f546f74e7f396a1e3a3f37",
+    "src/retail_agent/customer.py": "7b8637dfc0826379cf319b91396fd81d0ae68ab1f98d8698fb822e8b7f23b2e7",
+    "src/retail_agent/reward.py": "ea9cee7824abf85df97457d08a11e4998de39aa3372c18d03bdf1ec94c5aba12",
+    "src/retail_agent/training_reward.py": "49040450bd8de9fe465d347a78152ed7d3ac0d500a800dc230bf47785fe46e74",
+    "src/retail_agent/community_protocol.py": "3d766f5722aa286d782b7b56ba77101c0ecbbd2ffc516dfe0165724d37da7f0b",
+    "third_party/tau2-bench/src/tau2/domains/retail/tools.py": "7063727dfcaa428d2b78745ed025210312f080506c3d24a7059383945e50613f"
+  }
+}

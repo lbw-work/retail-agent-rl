@@ -1,0 +1,278 @@
+{
+  "origin": "retail_subset_v1",
+  "original_splits_sha256": "94d2ac5b05a2a50f246ad90234fad633122beda9045ced397ccc59c3bfd10033",
+  "nodes": [
+    {
+      "node": "sft:retail_dialog_88",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_324",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_785",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_526",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_916",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_315",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_410",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_500",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_774",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_56",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_823",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_134",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_683",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_736",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_625",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_202",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_14",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_341",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_142",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_483",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_221",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_865",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_772",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_699",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_731",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_387",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_591",
+      "side": "dev"
+    },
+    {
+      "node": "sft:retail_dialog_148",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_1",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_12",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_15",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_22",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_28",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_45",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_47",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_57",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_82",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_107",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_140",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_226",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_229",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_235",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_236",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_237",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_243",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_250",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_283",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_303",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_305",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_322",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_350",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_363",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_384",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_414",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_422",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_427",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_432",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_434",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_440",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_478",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_479",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_487",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_510",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_512",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_519",
+      "side": "test"
+    },
+    {
+      "node": "rl:retail_521",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_535",
+      "side": "dev"
+    },
+    {
+      "node": "rl:retail_553",
+      "side": "test"
+    }
+  ]
+}

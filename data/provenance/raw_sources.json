@@ -1,0 +1,520 @@
+{
+  "dataset_id": "inclusionAI/AReaL-tau2-data",
+  "dataset_revision": "86971dc03da6e7c1a7933295e05b84aab8215386",
+  "dataset_license": "apache-2.0",
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "model_license": "apache-2.0",
+  "files": [
+    {
+      "path": "data/raw/README.md",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/README.md",
+      "bytes": 6722,
+      "sha256": "53b523063cab3a6c32f9a7f21546672860acd56afc07eee2566d9724cc07a004",
+      "upstream_git_blob": "07302566fac0440bc1814fe17c19e16c09b34074",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tau2_rl_train.jsonl",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/tau2_rl_train.jsonl",
+      "bytes": 8692745,
+      "sha256": "f7cd4c53c279819cf7c96da3986295f94bd613c0ee078715e8ac6238ad1e5cfb",
+      "upstream_git_blob": "773c3842f86d3be88933ce4b146f08817441eac6",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tau2_sft_train.jsonl",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/tau2_sft_train.jsonl",
+      "bytes": 874041865,
+      "sha256": "24bc4d479799ef5d5efec7a5388ea2de6bf5dc5ab7c2c83e9b5ee26fa5813804",
+      "upstream_sha256": "24bc4d479799ef5d5efec7a5388ea2de6bf5dc5ab7c2c83e9b5ee26fa5813804",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/databases/tau2_retail_new_db_1.json",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/tau2_rl_database/tau2_retail_new_db_1.json",
+      "bytes": 7635287,
+      "sha256": "785b3fe40f8f9e9ac033bf3071c3f3bd27da4108ce68532fb4170be5d3a1c07e",
+      "upstream_git_blob": "5ac2b1ee3e6a0a5017b7417bbf424d55a2be6cc7",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/databases/tau2_retail_new_db_2.json",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/tau2_rl_database/tau2_retail_new_db_2.json",
+      "bytes": 10632839,
+      "sha256": "4cfa2f845239052f0e062328dbfb2b41477639079c123e957a473f9e192c0e4a",
+      "upstream_sha256": "4cfa2f845239052f0e062328dbfb2b41477639079c123e957a473f9e192c0e4a",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/databases/tau2_retail_new_db_3.json",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/tau2_rl_database/tau2_retail_new_db_3.json",
+      "bytes": 4069707,
+      "sha256": "2d872f166fa11da78df4dba12905e8dcf2e71d1873ec2a8f0c26c7d2a686e6e7",
+      "upstream_git_blob": "bc6ab819498efef2c362faf6ef77c53bf816ee17",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/databases/tau2_retail_new_db_4.json",
+      "url": "https://huggingface.co/datasets/inclusionAI/AReaL-tau2-data/resolve/86971dc03da6e7c1a7933295e05b84aab8215386/tau2_rl_database/tau2_retail_new_db_4.json",
+      "bytes": 8622494,
+      "sha256": "00b2095d6351c958b546561f791663c413e83346b1becf59cd55a1c3a49b749b",
+      "upstream_git_blob": "3f769d7f97fc4b96b2ff2e0975232ac84ce6fe8c",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tokenizer/tokenizer.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "upstream_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tokenizer/tokenizer_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer_config.json",
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "upstream_git_blob": "417d038a63fa3de29cfde265caedae14d1a58d92",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tokenizer/config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/config.json",
+      "bytes": 726,
+      "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+      "upstream_git_blob": "e49eccdc32f36da9c09cfa0e737084f9e0105e5e",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tokenizer/README.md",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/README.md",
+      "bytes": 16857,
+      "sha256": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+      "upstream_git_blob": "2de5ee7eee214bb55ea33ec7505c5838a7adf7f6",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tokenizer/LICENSE",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/LICENSE",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "upstream_git_blob": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "upstream_integrity_verified": true
+    },
+    {
+      "path": "data/raw/tau2-v0.2.0.tar.gz",
+      "url": "https://codeload.github.com/sierra-research/tau2-bench/tar.gz/f8de30c298689cbe0117d76a378e7315a17e5bd8",
+      "bytes": 93815204,
+      "sha256": "5c9b62ce7a87534c7a88cdbe7c8e3a7e01d6174fa24d2b8987e0378c65ae228f"
+    }
+  ],
+  "environment_dependencies": {
+    "numpy": "2.5.3",
+    "docstring_parser": "0.17.0",
+    "pandas": "2.2.3",
+    "packaging": "26.3",
+    "pydantic": "2.12.3",
+    "toml": "0.10.2",
+    "pytz": "2026.5",
+    "requests": "2.34.2",
+    "python-dotenv": "1.2.1",
+    "addict": "2.4.0",
+    "tzdata": "2026.5",
+    "huggingface_hub": "0.36.2",
+    "hf-xet": "1.7.0",
+    "safetensors": "0.8.0",
+    "tqdm": "4.70.1",
+    "loguru": "0.7.3",
+    "urllib3": "2.8.0",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "deepdiff": "8.6.1",
+    "fsspec": "2026.9.0",
+    "transformers": "4.57.6",
+    "certifi": "2026.7.22",
+    "Jinja2": "3.1.6",
+    "annotated-types": "0.8.0",
+    "regex": "2026.9.29",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "MarkupSafe": "3.0.4",
+    "filelock": "4.1.0",
+    "tokenizers": "0.22.2",
+    "orderly-set": "5.5.0",
+    "pydantic_core": "2.41.4",
+    "charset-normalizer": "3.5.2",
+    "six": "1.17.0",
+    "idna": "3.20"
+  },
+  "environment": {
+    "repository": "https://github.com/sierra-research/tau2-bench",
+    "tag": "v0.2.0",
+    "commit": "f8de30c298689cbe0117d76a378e7315a17e5bd8",
+    "license": "MIT",
+    "archive_sha256": "5c9b62ce7a87534c7a88cdbe7c8e3a7e01d6174fa24d2b8987e0378c65ae228f",
+    "archive_url": "https://codeload.github.com/sierra-research/tau2-bench/tar.gz/f8de30c298689cbe0117d76a378e7315a17e5bd8",
+    "source_files": [
+      {
+        "path": "third_party/tau2-bench/src/tau2/__init__.py",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/agent/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/agent/base.py",
+        "sha256": "67ea4b5b79ac5d7d981ab25a95d8bfb4ccea7ebda941a60e838c98da621b213f"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/agent/llm_agent.py",
+        "sha256": "5b5b404ae261f4cbaf5769cb7b3cec09a1442f28b5975bb72e4dc857ead03742"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/api_service/__init__.py",
+        "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/api_service/api_config.py",
+        "sha256": "7eedc4d41d7dd41c45afa243037c6eb03b7de68f8be28bdda8db869ecae3ebc0"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/api_service/data_model.py",
+        "sha256": "3aa78323402498716bc5773217ff7d79ed0b703e2d0bce0d6f37699426a4152e"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/api_service/simulation_service.py",
+        "sha256": "b74b43da92ba0db9434130a9f403ce709d33c38b361ab63dd99cfb9b253564b2"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/cli.py",
+        "sha256": "11263e6a68289e16db3f28c2acf5e328b370d6b4d937f72183684fa9d1201f95"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/config.py",
+        "sha256": "9c087ff1ea878c80fcd4606542bf572b9ac07b580d36873ae7713f960dc15847"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/data_model/__init__.py",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/data_model/message.py",
+        "sha256": "7945452ea832a3fef02434438dcde1261c52d11c47d095ae967d5f912ac8d750"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/data_model/simulation.py",
+        "sha256": "f7fdf7587cc6f277f984a067b88df8341227b15193d2da708ef8fe7bdb636b29"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/data_model/submission.py",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/data_model/tasks.py",
+        "sha256": "c5ec444a81a832bc2a0d5d86e614b65e130370e035945cfde1bbe4bdba3b85c5"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/airline/__init__.py",
+        "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/airline/data_model.py",
+        "sha256": "a8083e2f590e4b9b66a65d7cd50b7a0247e4fa33d6961aaeb02e4d92488b3cff"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/airline/environment.py",
+        "sha256": "3a5b63c6d49fe5cfb3516723fcdbbd98bc135eb190654915f57049f8a0de3942"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/airline/tools.py",
+        "sha256": "3987f21c286314cb48764f97052934ff4fd60e27a0b2e4a43423911adf8eaa26"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/airline/utils.py",
+        "sha256": "9da26327af3d7fa94e05d48869d8b06cd8110313fc24d308993a750106b11f06"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/mock/__init__.py",
+        "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/mock/data_model.py",
+        "sha256": "12f8be77d805d8d332291d6f0b3283d30ff0581c15d887ab5a1f37f8a9f395aa"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/mock/environment.py",
+        "sha256": "80eeb464f23597b179d3161a2df9933c20fe908796ff8a9bf85a49eec5f4d7bb"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/mock/tools.py",
+        "sha256": "926b077132c8eabd2bbae8173dbed299eea7fcd4a78c74c3986766626a24b928"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/mock/utils.py",
+        "sha256": "2d288884c91244852ea2d32b4c03e5dab7acaf2635d61e13a71de5e8db2bc1ce"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/retail/__init__.py",
+        "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/retail/data_model.py",
+        "sha256": "f5ad09590953855cc49d2ab2ad5c0594be408cae74d1500fb278e5a6bf2c50d6"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/retail/environment.py",
+        "sha256": "e8e45eaa7acef914dae2a0113b751dda6081140c9c6e2749bb6162e57b2dd0cf"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/retail/tools.py",
+        "sha256": "7063727dfcaa428d2b78745ed025210312f080506c3d24a7059383945e50613f"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/retail/utils.py",
+        "sha256": "a385b085b63d0e5921c15f7e2201b00df1d984990f4dbb7b24a867e3bf7cb648"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/__init__.py",
+        "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/data_model.py",
+        "sha256": "f868cbbd344cadf6c376f21976edfa38b8cfe199922748e31eee666f791a0628"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/environment.py",
+        "sha256": "b0936a639992a7fd54bd608efa57e5943f709ef2c33a1098c697692268d758e7"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/const.py",
+        "sha256": "1f7100229a56c86ea2f47d6c78fe26f7e0fbab65ad91150f9436f0fee09d7784"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/create_tasks.py",
+        "sha256": "7ce75c5afc869a344985e68f7725d18709e51f6aa1233a91e5d387ba45bfac59"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/manager.py",
+        "sha256": "c635086e0eaf037baf17826c20b806341506360236bc0b45d415f4f3ac95af9a"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/mms_issues.py",
+        "sha256": "f7350a6771ac28464ee392731f741486b421126ddf907082891d2cfc4a739b24"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/mobile_data_issues.py",
+        "sha256": "2c5169d82c6fad894ffd9447b98c249312155354d428fb3d3f373176b82fd667"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/service_issues.py",
+        "sha256": "a646ab516cdd7f9a3716dfa9acd7ca60741bb7db81494c26c2c988f2efe3db2a"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tasks/utils.py",
+        "sha256": "aaf9ee7d1e3699918292902951ca929ff7d0e7d7a2c8f782a0bd14e3bf13ca26"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/tools.py",
+        "sha256": "388552434d1b8225e33e7958bdb6efccfe92b49e11d1838568d9b559514e9d01"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/user_data_model.py",
+        "sha256": "27be0006694e9a740dd378f42099d6d1afecbd445f7906aedcd1f800087377c2"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/user_tools.py",
+        "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/domains/telecom/utils.py",
+        "sha256": "ee7b5bb9ba813e4ccb16b610afe16b7eab4b858ee4cebcb86fca7336b474535d"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/db.py",
+        "sha256": "49e12f900a8aabe62d6137a9baa1e7d471f9b3e516cf7c85fb61ecde8a65154c"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/environment.py",
+        "sha256": "6d2fcc1df22131f35747bfc45acb349ec6239fcb353d6cc3a77e921796090f0e"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/server.py",
+        "sha256": "5ec31d6b75139106bf331a8a0125854ecf873fa3517bfe7420323bd560d12d4e"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/tool.py",
+        "sha256": "6dd74021ba95a6f8dfa0971546b768b90e15b212f8f9051156ae6bcdd24b77d3"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/toolkit.py",
+        "sha256": "ba8eb886af4cd7ede72cf0acc911253ddac811ad4571f9d4f2a4a0145d6e7fb0"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/environment/utils/interface_agent.py",
+        "sha256": "0e8b1119aed3bbd78142abe60d4989eb8405229869a78881ac3f8ca71d448392"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/__init__.py",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/evaluator.py",
+        "sha256": "abd68908413074734f931db2aac50efd205f46115a7d5c207cffd6929aa838a4"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/evaluator_action.py",
+        "sha256": "98117528065f2f6b226436dfb6b7dd21b258ee6025ffc37e67eea8de01cadb97"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/evaluator_base.py",
+        "sha256": "184bf96a0cb0e62f175a1906d82998a17bb0fbc372f8b4e4b4498c8c5f19a545"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/evaluator_communicate.py",
+        "sha256": "9b29797302320b8b233348d3ffa399b2e0c4460f1ee88463794152c82c3ed3b4"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/evaluator_env.py",
+        "sha256": "ee93098f381cb4036bb344da780e5e80f2b0520d0868a5eea7bf420985ca6fb3"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/evaluator/evaluator_nl_assertions.py",
+        "sha256": "f457467669a9df437af17b14a97c06e9c67214a60ddb5a96e7a6c04974ae2c16"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/metrics/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/metrics/agent_metrics.py",
+        "sha256": "a757407639046af7c6cf6172714d3b5eedaed3bf7798822c396381f09927f59a"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/metrics/break_down_metrics.py",
+        "sha256": "e47bcfbf6c696c06a1c2c68996b3f26e30c89c32107a02304e5e0580d4450b6b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/orchestrator/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/orchestrator/environment_manager.py",
+        "sha256": "c548268b3c7a9a526c7b9fcfcef9058bff878dc3b17cef31793eccc695b6a049"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/orchestrator/orchestrator.py",
+        "sha256": "dad3814127f77c0490bdccc0701076a9f5ee0655cbf7a744ecb92b037522bd17"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/orchestrator/utils.py",
+        "sha256": "b0940cb324f4c44bfd6a63e9a3cbaf9336a5b95c50c3da201ad1ea8340858dbe"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/registry.py",
+        "sha256": "3be78f08b044cd942284520785549070f77a3ad0ae2dd290ea3ec40aa66d1253"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/run.py",
+        "sha256": "358502574ca5ee4cd184386343d52462ce71a68f92ef5c28a4d1666aadee6f27"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/check_data.py",
+        "sha256": "60878ba719227e2583c02fbe9dec93b6589ed33c6e56ce6874f1f2c7492acf03"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/evaluate_trajectories.py",
+        "sha256": "95359191d088d5fc4880ee05bcb1d6997b766611e9387cd0bd601a80098f7dd7"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/leaderboard/prepare_submission.py",
+        "sha256": "e045ac166cc39d47fa47bb76319c8baebb46730f733385ba6cc05ac27e8f2476"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/leaderboard/submission.py",
+        "sha256": "0228641f6c1cf31aeb8ec63867d07ae157b6bc8cb4215729a159508633eb2af8"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/leaderboard/verify_trajectories.py",
+        "sha256": "91df8a013be197487dadb6ace5fbc4bf7b852bbf443fc62396d23bdc097a2674"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/leaderboard/verify_trajectories_private.py",
+        "sha256": "8559f11d219655a01093f74028a7be232161dcdea5fe6d1346c15184a463c22a"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/leaderboard/verify_trajectories_public.py",
+        "sha256": "dbf84dc510c9f2f958e17fc64178bee8d7bbfb22b4c1f2752a26daad00a1029b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/show_domain_doc.py",
+        "sha256": "af6b584d51d05fa961df91434d2e262a10a751d5362d8fc1ad570ceec06432cc"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/start_servers.py",
+        "sha256": "d1d98bc7c6fb34b57569ded1ee2bf155b30f84028c9582d07913a79895d29688"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/scripts/view_simulations.py",
+        "sha256": "661c96df1e53ae1479f7e1f836065318f84aa1212d1a4cc8b8f0c1282ffd8a81"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/user/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/user/base.py",
+        "sha256": "e58d663edcb8bfcbd70f19736b21672e2b323c92c5668fb82dfb81e1cf5ed3cc"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/user/user_simulator.py",
+        "sha256": "ecfb0f40868b6a4255b41d2253d74dc59d56a5f658417968fdac79659831a210"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/utils/__init__.py",
+        "sha256": "066e48eca4b7b77d2d18c1abe9b856d61d00c3b09bd21cebd0481246bb8b48ae"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/utils/display.py",
+        "sha256": "f942adf24169467538473f7a43a56a9f19b88c93737c418d7a05c65850f6cdb9"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/utils/io_utils.py",
+        "sha256": "e9482ab57642d328e4aaf3f6d3de24c5d0cd98063d8f14c9a143748c18aa087b"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/utils/llm_utils.py",
+        "sha256": "20ebca369b6520fc3467d00654fba4f5ffa0c6d4a0f1e5324c88ff31a8dc2697"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/utils/pydantic_utils.py",
+        "sha256": "0daaa10ec85f9949e88acb34da6cbf2439b0616f7846b66101dc869928fe9707"
+      },
+      {
+        "path": "third_party/tau2-bench/src/tau2/utils/utils.py",
+        "sha256": "bdcfe56cdee971253b30d5436a80ed7208364f4443827e774f1b260b7edb32d5"
+      },
+      {
+        "path": "third_party/tau2-bench/data/tau2/domains/retail/policy.md",
+        "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+      }
+    ]
+  }
+}

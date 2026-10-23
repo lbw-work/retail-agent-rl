@@ -1,0 +1,62 @@
+{
+  "selection": "First TRAIN row matching each fixed business predicate, before model sampling; no outcome filtering",
+  "train_file": "data/versions/retail_rl_v3/processed/rl_train.jsonl",
+  "train_sha256": "58f736292c49eb7c18c51a308db0a7b37851d52d61b45f773df6018ecf9501af",
+  "profile_sha256": "069d6b9141f720cdcfcdaf1fd9be2667928df1536e33251879b6f53ac9664b9d",
+  "seeds": [
+    42,
+    43,
+    44,
+    45
+  ],
+  "new_trajectory_count": 16,
+  "held_out_benchmark": false,
+  "training_authorized": false,
+  "score_changes": false,
+  "selected": [
+    {
+      "task_id": "retail_113",
+      "category": "cancel_and_payment",
+      "train_row_index": 2,
+      "businesses": [
+        "cancel_pending_order",
+        "modify_pending_order_payment"
+      ],
+      "difficulty": "pair",
+      "row_sha256": "a6e2f25a9043f1ecd960689da8756b0e8657621ce23391a76075de63e2ce2f8f"
+    },
+    {
+      "task_id": "retail_135",
+      "category": "item_modification",
+      "train_row_index": 5,
+      "businesses": [
+        "modify_pending_order_items"
+      ],
+      "difficulty": "single",
+      "row_sha256": "ca5342ca20f04d5dae74a8fa71d6ebae168337c50b75a9bc728409b028c6ff77"
+    },
+    {
+      "task_id": "retail_136",
+      "category": "exchange",
+      "train_row_index": 6,
+      "businesses": [
+        "exchange_delivered_order_items"
+      ],
+      "difficulty": "single",
+      "row_sha256": "2b3bfb4105f431df643a03d6994a85f16fed29de8fa4275b8d84139f05e95f5e"
+    },
+    {
+      "task_id": "retail_145",
+      "category": "order_and_profile_address",
+      "train_row_index": 7,
+      "businesses": [
+        "modify_pending_order_address",
+        "modify_user_address"
+      ],
+      "difficulty": "pair",
+      "row_sha256": "5253314dd63ca04f3706dd5588ec5268727ed4f8d48ae6ec0652a677db902eb6"
+    }
+  ],
+  "previous_return_task": "retail_174",
+  "sampling_limits_unchanged": true
+}

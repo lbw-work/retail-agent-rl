@@ -1,0 +1,117 @@
+{
+  "id": "retail_136",
+  "business": "exchange_delivered_order_items",
+  "businesses": [
+    "exchange_delivered_order_items"
+  ],
+  "difficulty": "single",
+  "prompt": [
+    {
+      "role": "system",
+      "content": "You are a retail customer service agent. Follow the policy below. In each turn, either send a message to the customer or make exactly one tool call; do not do both. Use the provided tool-call format for tools, and ordinary text when speaking to the customer.\n<policy>\n# Retail agent policy\n\nAs a retail agent, you can help users:\n\n- **cancel or modify pending orders**\n- **return or exchange delivered orders**\n- **modify their default user address**\n- **provide information about their own profile, orders, and related products**\n\nAt the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code. This has to be done even when the user already provides the user id.\n\nOnce the user has been authenticated, you can provide the user with information about order, product, profile information, e.g. help the user look up order id.\n\nYou can only help one user per conversation (but you can handle multiple requests from the same user), and must deny any requests for tasks related to any other user.\n\nBefore taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed.\n\nYou should not make up any information or knowledge or procedures not provided by the user or the tools, or give subjective recommendations or comments.\n\nYou should at most make one tool call at a time, and if you take a tool call, you should not respond to the user at the same time. If you respond to the user, you should not make a tool call at the same time.\n\nYou should deny user requests that are against this policy.\n\nYou should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user.\n\n## Domain basic\n\n- All times in the database are EST and 24 hour based. For example \"02:30:00\" means 2:30 AM EST.\n\n### User\n\nEach user has a profile containing:\n\n- unique user id\n- email\n- default address\n- payment methods.\n\nThere are three types of payment methods: **gift card**, **paypal account**, **credit card**.\n\n### Product\n\nOur retail store has 50 types of products.\n\nFor each **type of product**, there are **variant items** of different **options**.\n\nFor example, for a 't-shirt' product, there could be a variant item with option 'color blue size M', and another variant item with option 'color red size L'.\n\nEach product has the following attributes:\n\n- unique product id\n- name\n- list of variants\n\nEach variant item has the following attributes:\n\n- unique item id\n- information about the value of the product options for this item.\n- availability\n- price\n\nNote: Product ID and Item ID have no relations and should not be confused!\n\n### Order\n\nEach order has the following attributes:\n\n- unique order id\n- user id\n- address\n- items ordered\n- status\n- fullfilments info (tracking id and item ids)\n- payment history\n\nThe status of an order can be: **pending**, **processed**, **delivered**, or **cancelled**.\n\nOrders can have other optional attributes based on the actions that have been taken (cancellation reason, which items have been exchanged, what was the exchane price difference etc)\n\n## Generic action rules\n\nGenerally, you can only take action on pending or delivered orders.\n\nExchange or modify order tools can only be called once per order. Be sure that all items to be changed are collected into a list before making the tool call!!!\n\n## Cancel pending order\n\nAn order can only be cancelled if its status is 'pending', and you should check its status before taking the action.\n\nThe user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. Other reasons are not acceptable.\n\nAfter user confirmation, the order status will be changed to 'cancelled', and the total will be refunded via the original payment method immediately if it is gift card, otherwise in 5 to 7 business days.\n\n## Modify pending order\n\nAn order can only be modified if its status is 'pending', and you should check its status before taking the action.\n\nFor a pending order, you can take actions to modify its shipping address, payment method, or product item options, but nothing else.\n\n### Modify payment\n\nThe user can only choose a single payment method different from the original payment method.\n\nIf the user wants the modify the payment method to gift card, it must have enough balance to cover the total amount.\n\nAfter user confirmation, the order status will be kept as 'pending'. The original payment method will be refunded immediately if it is a gift card, otherwise it will be refunded within 5 to 7 business days.\n\n### Modify items\n\nThis action can only be called once, and will change the order status to 'pending (items modifed)'. The agent will not be able to modify or cancel the order anymore. So you must confirm all the details are correct and be cautious before taking this action. In particular, remember to remind the customer to confirm they have provided all the items they want to modify.\n\nFor a pending order, each item can be modified to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.\n\nThe user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.\n\n## Return delivered order\n\nAn order can only be returned if its status is 'delivered', and you should check its status before taking the action.\n\nThe user needs to confirm the order id and the list of items to be returned.\n\nThe user needs to provide a payment method to receive the refund.\n\nThe refund must either go to the original payment method, or an existing gift card.\n\nAfter user confirmation, the order status will be changed to 'return requested', and the user will receive an email regarding how to return items.\n\n## Exchange delivered order\n\nAn order can only be exchanged if its status is 'delivered', and you should check its status before taking the action. In particular, remember to remind the customer to confirm they have provided all items to be exchanged.\n\nFor a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.\n\nThe user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.\n\nAfter user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order.\n</policy>"
+    }
+  ],
+  "user_scenario": {
+    "instructions": {
+      "domain": "retail",
+      "reason_for_call": "Customer wants to exchange items from two delivered orders and modify an item in a pending order",
+      "known_info": "{\"name\": {\"first_name\": \"Will\", \"last_name\": \"Kelly\"}, \"user_id\": \"will_kelly_318\", \"email\": \"will.kelly@email.com\", \"order_ids\": [\"#W2151985\", \"#W6544264\", \"#W2589106\"], \"order_items\": [{\"order_id\": \"#W2151985\", \"item_id\": \"9612497925\", \"name\": \"T-Shirt\", \"options\": {\"color\": \"blue\", \"size\": \"M\", \"material\": \"cotton\", \"style\": \"crew neck\"}}, {\"order_id\": \"#W6544264\", \"item_id\": \"4153505238\", \"name\": \"Running Shoes\", \"options\": {\"size\": \"8\", \"color\": \"red\", \"material\": \"leather\", \"sole\": \"EVA\"}}, {\"order_id\": \"#W2589106\", \"item_id\": \"9385662952\", \"name\": \"Fleece Jacket\", \"options\": {\"size\": \"L\", \"color\": \"black\", \"zipper\": \"full\"}}]}",
+      "unknown_info": null,
+      "task_instructions": "**User Goals:**\n1) Exchange items from two delivered orders - user wants to exchange a T-shirt from one order for a different color and exchange running shoes from another order for a different size\n2) Modify a pending order by changing a fleece jacket to a completely different product type (sneakers)\n\n**Details:**\n- User: Will Kelly, email will.kelly@email.com\n- For exchange goal 1: Order #W2151985 (delivered) contains a blue T-shirt that user wants to exchange for a purple one, and Order #W6544264 (delivered) contains running shoes size 8 that user wants to exchange for size 10\n- For modify goal 2: Order #W2589106 (pending) contains a fleece jacket that user wants to change to sneakers (different product type - should be rejected)\n- User should describe items vaguely at first ('my shirt', 'the shoes I ordered')\n- For the exchange requests, agent must verify availability of requested variants\n- The purple XL T-shirt (item_id 8124970213) IS available\n- The white leather running shoes size 10 (item_id 1775591963) IS available\n\n**Constraints & Behavior:**\n[Pattern B] User behavior: User first mentions wanting to exchange items from their delivered orders. After agent processes the exchange requests, user then reveals they also want to modify their pending order by changing the jacket to sneakers.\n- User authenticates with email\n- User initially says 'I want to exchange some items from my delivered orders' without specifying order numbers\n- When asked, user can provide order details\n- For exchanges, user describes desired changes vaguely ('I want a different color', 'I need a bigger size')\n- For the pending order modification, user explicitly asks to change the fleece jacket to sneakers, which should be rejected as it's a different product type"
+    }
+  },
+  "evaluation_criteria": {
+    "actions": [
+      {
+        "action_id": "retail_train_723_0",
+        "name": "find_user_id_by_email",
+        "arguments": {
+          "email": "will.kelly@email.com"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_1",
+        "name": "get_user_details",
+        "arguments": {
+          "user_id": "will_kelly_318"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_2",
+        "name": "get_order_details",
+        "arguments": {
+          "order_id": "#W2151985"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_3",
+        "name": "get_order_details",
+        "arguments": {
+          "order_id": "#W6544264"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_4",
+        "name": "get_order_details",
+        "arguments": {
+          "order_id": "#W2589106"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_5",
+        "name": "get_product_details",
+        "arguments": {
+          "product_id": "9523456873"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_6",
+        "name": "get_product_details",
+        "arguments": {
+          "product_id": "6938111410"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_7",
+        "name": "exchange_delivered_order_items",
+        "arguments": {
+          "new_item_ids": [
+            "8124970213"
+          ],
+          "payment_method_id": "credit_card_8834521",
+          "item_ids": [
+            "9612497925"
+          ],
+          "order_id": "#W2151985"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_723_8",
+        "name": "exchange_delivered_order_items",
+        "arguments": {
+          "new_item_ids": [
+            "1775591963"
+          ],
+          "payment_method_id": "credit_card_8834521",
+          "item_ids": [
+            "4153505238"
+          ],
+          "order_id": "#W6544264"
+        },
+        "info": null
+      }
+    ],
+    "communicate_info": []
+  },
+  "db_path": "tau2_rl_database/tau2_retail_new_db_4.json",
+  "dataset_version": "retail_full_v2",
+  "group": "rl:retail_103"
+}

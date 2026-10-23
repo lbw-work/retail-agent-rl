@@ -1,0 +1,18 @@
+experiment_profile = "mmopd_native_think_v1"
+model_id = "MMOPD/Qwen3-4B-OT3-tau2-2ep"
+model_revision = "d2712252ebb411b9a68a92474c1d868469357789"
+model_path = "models/mmopd-qwen3-4b-tau2-2ep"
+sft_adapter_dir = "models/mmopd-qwen3-4b-lora-init"
+enable_thinking = true
+seed = 42
+max_trajectory_tokens = 16384
+max_new_tokens_per_action = 4096
+max_assistant_actions = 24
+max_consecutive_tool_errors = 3
+# 与模型卡的tau2评估保持完整词表采样；不引入未校正的top-k/top-p截断。
+temperature = 1.0
+top_p = 1.0
+top_k = -1
+learning_rate = 0.000005
+evaluation_steps = [10, 20, 30, 40, 50, 60, 70, 80, 90, 94]
+data_exposure = "same_AReaL_source; dev/test_overlap_not_excluded; engineering_comparison_not_blind_generalization"

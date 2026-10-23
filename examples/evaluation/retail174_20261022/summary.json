@@ -1,0 +1,152 @@
+{
+  "task_id": "retail_174",
+  "reward_a": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "session_id": 0,
+      "seed": 42,
+      "termination": "completed",
+      "diagnostic": null,
+      "assistant_actions": 10,
+      "generations": 10,
+      "format_retries": 0,
+      "scores": {
+        "version": "business_subset_v2_us_country",
+        "task_id": "retail_174",
+        "termination": "completed",
+        "business_reward": 1.0,
+        "gate": 1.0,
+        "violations": [],
+        "goal_count": 2,
+        "completed_goals": [
+          [
+            "return_delivered_order_items",
+            "#W2196851"
+          ],
+          [
+            "return_delivered_order_items",
+            "#W4202427"
+          ]
+        ],
+        "progress": 1.0,
+        "reward_a": 1.0,
+        "reward_b": 1.0,
+        "partial_weight": 0.3,
+        "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+        "training_business_reward": 1.0
+      }
+    },
+    {
+      "session_id": 1,
+      "seed": 43,
+      "termination": "completed",
+      "diagnostic": null,
+      "assistant_actions": 10,
+      "generations": 10,
+      "format_retries": 0,
+      "scores": {
+        "version": "business_subset_v2_us_country",
+        "task_id": "retail_174",
+        "termination": "completed",
+        "business_reward": 1.0,
+        "gate": 1.0,
+        "violations": [],
+        "goal_count": 2,
+        "completed_goals": [
+          [
+            "return_delivered_order_items",
+            "#W2196851"
+          ],
+          [
+            "return_delivered_order_items",
+            "#W4202427"
+          ]
+        ],
+        "progress": 1.0,
+        "reward_a": 1.0,
+        "reward_b": 1.0,
+        "partial_weight": 0.3,
+        "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+        "training_business_reward": 1.0
+      }
+    },
+    {
+      "session_id": 2,
+      "seed": 44,
+      "termination": "completed",
+      "diagnostic": null,
+      "assistant_actions": 10,
+      "generations": 10,
+      "format_retries": 0,
+      "scores": {
+        "version": "business_subset_v2_us_country",
+        "task_id": "retail_174",
+        "termination": "completed",
+        "business_reward": 1.0,
+        "gate": 1.0,
+        "violations": [],
+        "goal_count": 2,
+        "completed_goals": [
+          [
+            "return_delivered_order_items",
+            "#W2196851"
+          ],
+          [
+            "return_delivered_order_items",
+            "#W4202427"
+          ]
+        ],
+        "progress": 1.0,
+        "reward_a": 1.0,
+        "reward_b": 1.0,
+        "partial_weight": 0.3,
+        "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+        "training_business_reward": 1.0
+      }
+    },
+    {
+      "session_id": 3,
+      "seed": 45,
+      "termination": "completed",
+      "diagnostic": null,
+      "assistant_actions": 10,
+      "generations": 10,
+      "format_retries": 0,
+      "scores": {
+        "version": "business_subset_v2_us_country",
+        "task_id": "retail_174",
+        "termination": "completed",
+        "business_reward": 1.0,
+        "gate": 1.0,
+        "violations": [],
+        "goal_count": 2,
+        "completed_goals": [
+          [
+            "return_delivered_order_items",
+            "#W2196851"
+          ],
+          [
+            "return_delivered_order_items",
+            "#W4202427"
+          ]
+        ],
+        "progress": 1.0,
+        "reward_a": 1.0,
+        "reward_b": 1.0,
+        "partial_weight": 0.3,
+        "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+        "training_business_reward": 1.0
+      }
+    }
+  ],
+  "peak_memory_gb": 3.971988632,
+  "shared_initial_prompt_verified": true,
+  "initial_database_isolation_verified": true,
+  "training_started": false,
+  "optimizer_calls": 0
+}

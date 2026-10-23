@@ -1,0 +1,16 @@
+status = "draft_unbenchmarked"
+model_id = "Qwen/Qwen3-4B"
+enable_thinking = false
+test_tasks = "data/versions/retail_rl_v3/processed/rl_test.jsonl"
+review_manifest = "data/versions/retail_rl_v3/manifests/review.json"
+output_dir = "outputs/evaluation"
+checkpoints = ["original", "sft", "sft_grpo"]
+target_test_tasks = 22
+num_trials = 1
+seed = 42
+temperature = 0.0
+max_assistant_actions = 24
+max_new_tokens_per_action = 512
+max_trajectory_tokens = 16384
+primary_metric = "task_success_rate"
+secondary_metrics = ["tool_argument_validity", "successful_episode_action_count", "system_error_count", "audited_policy_violations"]

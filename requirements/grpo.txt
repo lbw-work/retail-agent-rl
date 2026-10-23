@@ -1,0 +1,9 @@
+# 同一训练栈 + 项目已有 Retail/顾客运行依赖；不安装完整 tau2 云服务栈。
+-r train.txt
+pydantic==2.12.3
+deepdiff==8.6.1
+docstring-parser==0.17.0
+python-dotenv==1.2.1
+loguru==0.7.3
+toml==0.10.2
+addict==2.4.0

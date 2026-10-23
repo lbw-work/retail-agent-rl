@@ -1,0 +1,65 @@
+{
+  "task_id": "retail_113",
+  "session_id": 2,
+  "seed": 44,
+  "termination": "completed",
+  "diagnostic": null,
+  "assistant_actions": 15,
+  "generations": 15,
+  "format_retries": 0,
+  "business_tool_calls": 9,
+  "tool_errors": [],
+  "generated_tokens": 1472,
+  "customer_api_requests": 6,
+  "scores": {
+    "version": "business_subset_v2_us_country",
+    "task_id": "retail_113",
+    "termination": "completed",
+    "business_reward": 1.0,
+    "gate": 1.0,
+    "violations": [],
+    "goal_count": 3,
+    "completed_goals": [
+      [
+        "modify_pending_order_payment",
+        "#W3868423"
+      ],
+      [
+        "modify_pending_order_payment",
+        "#W1079647"
+      ],
+      [
+        "cancel_pending_order",
+        "#W9094057"
+      ]
+    ],
+    "progress": 1.0,
+    "reward_a": 1.0,
+    "reward_b": 1.0,
+    "partial_weight": 0.3,
+    "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+    "training_business_reward": 1.0
+  },
+  "successful_write_targets": [
+    [
+      "cancel_pending_order",
+      "#W9094057"
+    ],
+    [
+      "modify_pending_order_payment",
+      "#W1079647"
+    ],
+    [
+      "modify_pending_order_payment",
+      "#W3868423"
+    ]
+  ],
+  "missing_goal_targets": [],
+  "final_db_vs_reference": [],
+  "exact_score_match": true,
+  "exact_tool_and_database_replay": true,
+  "unique_call_ids": true,
+  "raw_token_fidelity": true,
+  "trace_folder": "retail_113/trajectory_2",
+  "transcript": "retail_113/trajectory_2/完整对话与工具调用.txt"
+}

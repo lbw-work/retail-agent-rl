@@ -1,0 +1,10 @@
+# 仅 Retail 环境依赖；Torch/Transformers/PEFT/vLLM/Ray 等使用冻结 verl uv.lock。
+# 不安装旧 requirements/train.txt 或 grpo.txt，避免覆盖新后端依赖。
+loguru==0.7.3
+docstring-parser==0.17.0
+PyYAML==6.0.3
+deepdiff==8.6.1
+addict==2.4.0
+python-dotenv==1.2.1
+toml==0.10.2
+requests==2.34.2

@@ -1,0 +1,8 @@
+# 本机通过离线数据和随机小 Qwen3/LoRA 链路验收的主依赖。
+# CUDA 平台依赖由服务器解析，再做同一验收；macOS 锁不代表 CUDA 验证。
+torch==2.8.0
+transformers==4.57.6
+trl==0.26.2
+peft==0.18.0
+accelerate==1.12.0
+datasets==4.4.1

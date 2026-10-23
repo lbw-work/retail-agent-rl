@@ -1,0 +1,13 @@
+# 05C：事先固定 TRAIN 清单；不会更新参数，不复用为 CUDA 训练轨迹。
+recipe_config = "configs/grpo_v2_diagnostic.toml"
+model_path = "models/qwen3-4b-mlx4bit"
+goal_policy = "scenario_locked_v1"
+# 早期 32KB 输入保护在 24 动作轨迹中触发；本轮保留完整公开历史。
+max_customer_prompt_bytes = 64000
+task_ids = ["retail_131", "retail_174", "retail_301", "retail_410", "retail_444", "retail_494", "retail_540", "retail_213", "retail_222", "retail_196"]
+# 原计划保留用于恢复种子；身份矛盾任务隔离，不继续付费采样。
+excluded_task_ids = ["retail_494"]
+# 首次 tokenizer 兼容中断已记账 0.00149912 元；两次合计仍不超过 1 元。
+api_additional_limit_cny = 0.9985
+# 05C 原始阶段的绝对账本上限；中断重启也不得重新增加 1 元。
+api_ledger_limit_cny = 1.26606248

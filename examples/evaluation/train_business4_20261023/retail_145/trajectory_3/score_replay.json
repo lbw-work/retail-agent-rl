@@ -1,0 +1,79 @@
+{
+  "task_id": "retail_145",
+  "session_id": 3,
+  "seed": 45,
+  "termination": "completed",
+  "diagnostic": null,
+  "assistant_actions": 14,
+  "generations": 14,
+  "format_retries": 0,
+  "business_tool_calls": 10,
+  "tool_errors": [
+    {
+      "id": "call_3",
+      "role": "tool",
+      "content": "Error: User not found",
+      "requestor": "assistant",
+      "error": true,
+      "turn_idx": null,
+      "timestamp": "2026-10-23T15:10:07.177184"
+    }
+  ],
+  "generated_tokens": 1074,
+  "customer_api_requests": 4,
+  "scores": {
+    "version": "business_subset_v2_us_country",
+    "task_id": "retail_145",
+    "termination": "completed",
+    "business_reward": 1.0,
+    "gate": 1.0,
+    "violations": [],
+    "goal_count": 3,
+    "completed_goals": [
+      [
+        "modify_pending_order_address",
+        "#W1221555"
+      ],
+      [
+        "modify_pending_order_address",
+        "#W1657057"
+      ],
+      [
+        "modify_user_address",
+        "rachel_morris_6444"
+      ]
+    ],
+    "progress": 1.0,
+    "reward_a": 1.0,
+    "reward_b": 1.0,
+    "partial_weight": 0.3,
+    "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+    "training_business_reward": 1.0
+  },
+  "successful_write_targets": [
+    [
+      "modify_pending_order_address",
+      "#W1221555"
+    ],
+    [
+      "modify_pending_order_address",
+      "#W1657057"
+    ],
+    [
+      "modify_pending_order_address",
+      "#W8046617"
+    ],
+    [
+      "modify_user_address",
+      "rachel_morris_6444"
+    ]
+  ],
+  "missing_goal_targets": [],
+  "final_db_vs_reference": [],
+  "exact_score_match": true,
+  "exact_tool_and_database_replay": true,
+  "unique_call_ids": true,
+  "raw_token_fidelity": true,
+  "trace_folder": "retail_145/trajectory_3",
+  "transcript": "retail_145/trajectory_3/完整对话与工具调用.txt"
+}

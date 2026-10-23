@@ -1,0 +1,47 @@
+status = "rl_v3_reviewed_sft_v2_cuda_pending"
+name = "RetailAgent-RL"
+model_id = "Qwen/Qwen3-4B"
+model_revision = "1cfa9a7208912126459214e8b04321603b3df60c"
+enable_thinking = false
+training_language = "en"
+ui_language = "zh"
+seed = 42
+
+[data]
+dataset_id = "inclusionAI/AReaL-tau2-data"
+dataset_revision = "86971dc03da6e7c1a7933295e05b84aab8215386"
+domain = "retail"
+dataset_version = "retail_full_v2"
+rl_dataset_version = "retail_rl_v3"
+rl_processed_dir = "data/versions/retail_rl_v3/processed"
+raw_dir = "data/raw"
+processed_dir = "data/versions/retail_full_v2/processed"
+database_dir = "data/databases"
+manifest_dir = "data/versions/retail_full_v2/manifests"
+
+[environment]
+repository = "https://github.com/sierra-research/tau2-bench"
+commit = "f8de30c298689cbe0117d76a378e7315a17e5bd8"
+tag = "v0.2.0"
+validation_status = "v2_563_raw_tasks_replayed_v3_514_rl_tasks_reaudited"
+checkout_dir = "third_party/tau2-bench"
+# v1 的 82 个任务已验证；v2 另有全量逐条参考检查，均不代表模型能力。
+rl_businesses = ["cancel_pending_order", "exchange_delivered_order_items", "return_delivered_order_items", "modify_pending_order_address", "modify_pending_order_items", "modify_pending_order_payment", "modify_user_address"]
+
+[customer]
+provider = "deepseek"
+base_url = "https://api.deepseek.com"
+model = "deepseek-flash"
+enable_thinking = false
+temperature = 0.0
+timeout_seconds = 60
+max_retries = 2
+
+[budget]
+currency = "CNY"
+total_limit = 50.0
+gpu_limit = 35.0
+api_limit = 10.0
+reserve_limit = 5.0
+# 启动新批次前须预留在途请求、保存与最终评估费用。
+stop_starting_new_work_at = 45.0

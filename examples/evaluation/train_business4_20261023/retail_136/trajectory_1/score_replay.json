@@ -1,0 +1,57 @@
+{
+  "task_id": "retail_136",
+  "session_id": 1,
+  "seed": 43,
+  "termination": "completed",
+  "diagnostic": null,
+  "assistant_actions": 18,
+  "generations": 18,
+  "format_retries": 0,
+  "business_tool_calls": 11,
+  "tool_errors": [],
+  "generated_tokens": 2460,
+  "customer_api_requests": 6,
+  "scores": {
+    "version": "business_subset_v2_us_country",
+    "task_id": "retail_136",
+    "termination": "completed",
+    "business_reward": 1.0,
+    "gate": 1.0,
+    "violations": [],
+    "goal_count": 2,
+    "completed_goals": [
+      [
+        "exchange_delivered_order_items",
+        "#W2151985"
+      ],
+      [
+        "exchange_delivered_order_items",
+        "#W6544264"
+      ]
+    ],
+    "progress": 1.0,
+    "reward_a": 1.0,
+    "reward_b": 1.0,
+    "partial_weight": 0.3,
+    "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+    "training_business_reward": 1.0
+  },
+  "successful_write_targets": [
+    [
+      "exchange_delivered_order_items",
+      "#W2151985"
+    ],
+    [
+      "exchange_delivered_order_items",
+      "#W6544264"
+    ]
+  ],
+  "missing_goal_targets": [],
+  "final_db_vs_reference": [],
+  "exact_score_match": true,
+  "exact_tool_and_database_replay": true,
+  "unique_call_ids": true,
+  "raw_token_fidelity": true,
+  "trace_folder": "retail_136/trajectory_1",
+  "transcript": "retail_136/trajectory_1/完整对话与工具调用.txt"
+}

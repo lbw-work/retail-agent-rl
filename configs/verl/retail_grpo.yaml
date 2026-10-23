@@ -1,0 +1,123 @@
+# 通过 train_verl 将本配置合并到冻结的 verl ppo_trainer 配置。
+algorithm:
+  adv_estimator: grpo
+  norm_adv_by_std_in_grpo: true
+  use_kl_in_reward: false
+  rollout_correction:
+    bypass_mode: false
+    rollout_is: null
+    rollout_rs: null
+
+data:
+  train_batch_size: 1
+  gen_batch_size: 1
+  val_batch_size: 1
+  dataloader_num_workers: 0
+  shuffle: false
+  validation_shuffle: false
+  max_prompt_length: 16384
+  max_response_length: 16384
+  truncation: error
+  filter_overlong_prompts: false
+  custom_cls:
+    path: pkg://retail_agent.verl_runtime
+    name: RetailDataset
+
+actor_rollout_ref:
+  hybrid_engine: true
+  model:
+    lora_rank: 16
+    lora_alpha: 32
+    target_modules: [q_proj, k_proj, v_proj, o_proj]
+    use_remove_padding: true
+    enable_gradient_checkpointing: true
+    use_fused_kernels: true
+    fused_kernel_options:
+      impl_backend: torch
+    # 仅在推理权重导出时合并；训练仍更新独立 LoRA，原适配器文件不改写。
+    lora:
+      merge: true
+  actor:
+    ppo_mini_batch_size: 1
+    ppo_micro_batch_size_per_gpu: 1
+    use_dynamic_bsz: false
+    ppo_epochs: 1
+    shuffle: false
+    loss_agg_mode: seq-mean-token-mean
+    clip_ratio: 0.2
+    clip_ratio_low: 0.2
+    clip_ratio_high: 0.2
+    # 大于本版本 exp(20) 的 ratio 上界，让额外 dual-clip 不生效；避免 0*inf。
+    clip_ratio_c: 1.0e10
+    use_kl_loss: false
+    entropy_coeff: 0
+    calculate_entropy: false
+    use_torch_compile: false
+    checkpoint:
+      save_lora_only: true
+    optim:
+      lr: 0.000005
+      weight_decay: 0.0
+      lr_scheduler_type: constant
+      lr_warmup_steps: 0
+    fsdp_config:
+      model_dtype: bf16
+      param_offload: true
+      optimizer_offload: true
+      use_torch_compile: false
+      use_no_sync_for_gradient_accumulation: false
+      mixed_precision:
+        param_dtype: bf16
+        reduce_dtype: fp32
+        buffer_dtype: bf16
+  rollout:
+    name: vllm
+    mode: async
+    dtype: bfloat16
+    n: 4
+    temperature: 0.8
+    top_p: 1.0
+    top_k: -1
+    calculate_log_probs: true
+    logprobs_mode: processed_logprobs
+    tensor_model_parallel_size: 1
+    data_parallel_size: 1
+    max_model_len: 16384
+    max_num_seqs: 1
+    max_num_batched_tokens: 2048
+    enable_chunked_prefill: true
+    enable_prefix_caching: true
+    # vLLM 的整个执行器预算，包含权重/激活/KV；不是只给 KV 的比例。
+    # 这是 24G 单卡的候选值，须用真实 16K 校准确认，不能保证显存足够。
+    gpu_memory_utilization: 0.55
+    enforce_eager: true
+    free_cache_engine: true
+    log_prob_use_dynamic_bsz: false
+    log_prob_micro_batch_size_per_gpu: 1
+    agent:
+      num_workers: 1
+      default_agent_loop: retail
+
+reward:
+  num_workers: 1
+  reward_model:
+    enable: false
+
+trainer:
+  use_v1: true
+  v1:
+    trainer_mode: sync
+  nnodes: 1
+  n_gpus_per_node: 1
+  total_epochs: 1
+  total_training_steps: 2
+  logger: [console]
+  project_name: retail_verl
+  val_before_train: false
+  test_freq: -1
+  save_freq: 1
+  resume_mode: disable
+  device: cuda
+
+transfer_queue:
+  enable: true

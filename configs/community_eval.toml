@@ -1,0 +1,14 @@
+experiment_profile = "community_single_action_eval_v1"
+model_id = "Jarrodbarnes/Qwen3-4B-tau2-grpo-v1"
+model_revision = "9902d3e07264157083e3d2c1eaea3735612f49b9"
+model_path = "models/community-qwen3-4b-tau2-grpo-v1-mlx4bit"
+conversion_manifest_sha256 = "85e160beb8f9c79fcbfca3a7f07aa6221e11f6a59fa86d2ead009f391a9d96b6"
+seed = 42
+temperature = 0.8
+top_p = 1.0
+top_k = 20
+repetition_penalty = 1.0
+max_new_tokens_per_action = 1200
+max_assistant_actions = 24
+max_trajectory_tokens = 16384
+max_consecutive_tool_errors = 3

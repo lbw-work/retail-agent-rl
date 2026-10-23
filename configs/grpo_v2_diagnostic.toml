@@ -1,0 +1,28 @@
+status = "phase_05b_offline_interface_cuda_unbenchmarked"
+model_id = "Qwen/Qwen3-4B"
+enable_thinking = false
+sft_adapter_dir = "outputs/downloads/sft_first_20261011_200837/outputs/sft/sft_first_20261011_200837/adapter"
+train_tasks = "data/versions/retail_full_v2/reviewed/rl_train_ready.jsonl"
+development_tasks = "data/versions/retail_full_v2/processed/rl_dev.jsonl"
+output_dir = "outputs/grpo"
+num_generations = 4
+# 先验证 1 次更新，再以 5 次更新试跑；20 不是承诺的最终训练量。
+max_steps = 20
+num_iterations = 1
+learning_rate = 0.000005
+use_vllm = false
+loss_type = "grpo"
+scale_rewards = "group"
+beta = 0.0
+reward_mode = "reward_a"
+seed = 42
+# 不做 top-k/top-p 截断或重复惩罚，匹配 TRL logits/temperature 的更新概率。
+temperature = 0.8
+# 实际采样与重算概率最大差超过此值时中止；05D 仍需 CUDA 实测。
+logprob_tolerance = 0.05
+loss_scope = "sampled_assistant_tokens_only"
+# 均为候选上限，须检查业务是否能在该范围内完成。
+max_assistant_actions = 24
+max_new_tokens_per_action = 512
+max_trajectory_tokens = 16384
+max_consecutive_tool_errors = 3

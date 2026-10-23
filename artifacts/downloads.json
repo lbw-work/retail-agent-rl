@@ -1,0 +1,236 @@
+{
+  "version": "v0.1.0",
+  "artifacts": {
+    "data": {
+      "repo_id": "Eternity5551/retail-agent-rl-artifacts",
+      "revision": "c9cf70530d9547b2b7a55967f39ee674694e745c",
+      "filename": "retail-data-v0.1.0.tar.gz",
+      "allowed_prefixes": [
+        "data"
+      ],
+      "bytes": 23611843,
+      "sha256": "0997a01a6d9b49df65998d565b8a6ae175d06a99730c6a45e356ab8fa4db9235",
+      "files": 46,
+      "parts": [
+        {
+          "filename": "bundles/retail-data-v0.1.0.000.bin",
+          "bytes": 2097152,
+          "sha256": "26e6f75a7ca33dc4fa2be2c1488e76f4b83aba400af32f404c6c6924307bdd1e"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.001.bin",
+          "bytes": 2097152,
+          "sha256": "80d371d2fdb880a9a3adb4038ef6291722076556b631ee0c4dc4056e775b47d3"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.002.bin",
+          "bytes": 2097152,
+          "sha256": "8bc562c00000f9d375d73f3a846f6e620e0e3b110faf4e8895b0484e4aa6bda3"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.003.bin",
+          "bytes": 2097152,
+          "sha256": "d1df198fc2912ffcd4d07d3beddd5f7077f9cc0c3b7ba3c2726eaf594b88cc02"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.004.bin",
+          "bytes": 2097152,
+          "sha256": "2cf98a24df05770f9021c0f6143e381f06ae27b4441c0a410d6785268eba9d55"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.005.bin",
+          "bytes": 2097152,
+          "sha256": "cbb18e15e8a10a84e74b7585b4dbba0bfe57e52f9439207be5f2eb2a66c0fbc0"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.006.bin",
+          "bytes": 2097152,
+          "sha256": "3806fc438662891826f1c6e4d3608c76d54c1251fdc40331f4d67cfa737d67ba"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.007.bin",
+          "bytes": 2097152,
+          "sha256": "7594b2978482e7dca381283afb67c0494e94b14611577cb154e1d54887b9ed2d"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.008.bin",
+          "bytes": 2097152,
+          "sha256": "e40870ef6048bd4382ec2a320f7b51ade9b9624c08f2eeb334d7a8f49f695e34"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.009.bin",
+          "bytes": 2097152,
+          "sha256": "329cd74503c82d8d470dc4571dcf4c4a2f9ab3538fd874cb51d770232c375e48"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.010.bin",
+          "bytes": 2097152,
+          "sha256": "3522eadbab78e286ca32b4bda6ee3f4da89a35f55597d73ccb131d214b6092e1"
+        },
+        {
+          "filename": "bundles/retail-data-v0.1.0.011.bin",
+          "bytes": 543171,
+          "sha256": "cd88636f7a3db7cb623dad2718a4a4c859a4ace66990b474867b0071de82e690"
+        }
+      ]
+    },
+    "sft": {
+      "repo_id": "Eternity5551/retail-agent-rl-artifacts",
+      "revision": "c9cf70530d9547b2b7a55967f39ee674694e745c",
+      "filename": "retail-sft-v0.1.0.tar.gz",
+      "allowed_prefixes": [
+        "outputs"
+      ],
+      "bytes": 47856904,
+      "sha256": "655822bde3cf38ea3f39c884691f5216f49e705f604bc1a54a68a448acbb01ec",
+      "files": 13,
+      "parts": [
+        {
+          "filename": "bundles/retail-sft-v0.1.0.000.bin",
+          "bytes": 2097152,
+          "sha256": "5ed9e4f399534fcf040dd2f12ec1c38f3bd31e9c534971d44608e245c31a7ac0"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.001.bin",
+          "bytes": 2097152,
+          "sha256": "198e00ac676648af58cee3548377b4cca5cd7698b659942f0f5b58aaa3b62a9f"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.002.bin",
+          "bytes": 2097152,
+          "sha256": "01cd2848805b60efd6c5d61af1546092c6207780265f87058eb6e743611778d6"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.003.bin",
+          "bytes": 2097152,
+          "sha256": "689511ff5a1368c7176162a7c8c596830f18fe9493ab47bff015fc0d44e264af"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.004.bin",
+          "bytes": 2097152,
+          "sha256": "f7ce3748193b53b14c6ba4202246d1617bca7841d1678fe603ee3a7361c4725a"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.005.bin",
+          "bytes": 2097152,
+          "sha256": "901e6a54f1be47fdc6a84e25afbeb44adf8e14a4c51595aadef99a263a408d73"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.006.bin",
+          "bytes": 2097152,
+          "sha256": "675ed7c963bbb4ac41430c16b1df2e06d398613f1ad08dd0ad1c2e43beeb2733"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.007.bin",
+          "bytes": 2097152,
+          "sha256": "1d38f1b88de5ab1a9b12438da0d7bfc870c5150d484ec3457be3c4b04d9f32ca"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.008.bin",
+          "bytes": 2097152,
+          "sha256": "85d4cdb5eb0a1209ac1fbc7a94fed57b4eaa5c14786d10ffa7c4774379523fad"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.009.bin",
+          "bytes": 2097152,
+          "sha256": "9dfb9c011b5ac3840de337b9f95a973416cff8ac34afd10514008926ead58ae6"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.010.bin",
+          "bytes": 2097152,
+          "sha256": "d4927259a8a044ee821e9438b5abb9df9c0a05bd04b14c2bbaa95f0dd2b93113"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.011.bin",
+          "bytes": 2097152,
+          "sha256": "a71a15d4d05d36aee5788119e5eed63996675b3a6238e66169b406cc55e2fc7f"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.012.bin",
+          "bytes": 2097152,
+          "sha256": "870baab00d68e0a69262578179a28f62e519ab24dea3bc83b013b6e4110e0412"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.013.bin",
+          "bytes": 2097152,
+          "sha256": "d17775ee453fcafb3623064e90de0194bbcd0c2be52a6cf67b6b5b152cb1af21"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.014.bin",
+          "bytes": 2097152,
+          "sha256": "565b4fd631f3909141a20fb283e7316ae63b030b6e80b846eea70edf206bb76c"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.015.bin",
+          "bytes": 2097152,
+          "sha256": "a8a13d268cbb9b606d9e31a015f9cd4983188886d3fc3900638200a53cc06596"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.016.bin",
+          "bytes": 2097152,
+          "sha256": "9322e34a9145a81fefe977f679704dac88db78a509357c93fa3d1bcebc92ae89"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.017.bin",
+          "bytes": 2097152,
+          "sha256": "3cfc39cfd7af9e1f300d8063229f26a6857ad62911817ac044bb9706376c4f63"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.018.bin",
+          "bytes": 2097152,
+          "sha256": "87af83c6838650f5adaba93712be109dd623e87f2a5d9cc5fa466f5042bc687c"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.019.bin",
+          "bytes": 2097152,
+          "sha256": "c8cb294b109ac76502939e0419c65712c6bf0ce3cb05bcdf04a61d1a3217c062"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.020.bin",
+          "bytes": 2097152,
+          "sha256": "4eccd31617d79ffb11305e0639597c9b8ae89686b5f6e25c3d69a92f38e96405"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.021.bin",
+          "bytes": 2097152,
+          "sha256": "1ce6b871e8dbfd6df4a010f8db5adce72a649adc99a57907c63b1048d8098acb"
+        },
+        {
+          "filename": "bundles/retail-sft-v0.1.0.022.bin",
+          "bytes": 1719560,
+          "sha256": "17e076079feabcc3b21eda2432498478870212ffdf623b0f10e3387ffe991793"
+        }
+      ]
+    },
+    "verl": {
+      "repo_id": "Eternity5551/retail-agent-rl-artifacts",
+      "revision": "c9cf70530d9547b2b7a55967f39ee674694e745c",
+      "filename": "verl-source-v0.1.0.tar.gz",
+      "allowed_prefixes": [
+        "third_party/verl-main"
+      ],
+      "bytes": 2945110,
+      "sha256": "9357ded098bb9485548d3316ac79864448d64a943208a02afd9bdeca66123963",
+      "files": 1252,
+      "parts": [
+        {
+          "filename": "bundles/verl-source-v0.1.0.000.bin",
+          "bytes": 2097152,
+          "sha256": "12cb775e662ddc63dce1f247467192e72158227b4996cc75d95cd6ef5fc4d0be"
+        },
+        {
+          "filename": "bundles/verl-source-v0.1.0.001.bin",
+          "bytes": 847958,
+          "sha256": "978244c51ec7ead1643727f80361b806396cc06ddec514d2f2c73ee396ae05c2"
+        }
+      ]
+    },
+    "community-model": {
+      "repo_id": "Jarrodbarnes/Qwen3-4B-tau2-grpo-v1",
+      "revision": "9902d3e07264157083e3d2c1eaea3735612f49b9",
+      "destination": "models/community-qwen3-4b-tau2-grpo-v1-mlx4bit",
+      "conversion_manifest": "artifacts/model_manifests/community-qwen3-4b-tau2-grpo-v1-mlx4bit/CONVERSION_MANIFEST.json",
+      "mode": "rebuild_and_verify_exact_mlx_conversion"
+    }
+  }
+}

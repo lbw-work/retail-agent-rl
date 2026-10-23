@@ -1,0 +1,95 @@
+{
+  "status": "sixteen_complete_original_scorer_replay_verified",
+  "scoring_modified": false,
+  "training_started": false,
+  "findings": [
+    {
+      "task_id": "retail_135",
+      "seeds": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "scenario_customer_reference_alignment",
+      "observed": "All four customers rejected changing red shoes to the white size-10 variant used by the reference; agent transferred without modifying the order.",
+      "reference_vs_request": "Scenario explicitly requests size changes but does not explicitly authorize a color change; original shoes are red, reference size-10 shoes are white. Customer simulation preserved other original attributes.",
+      "interpretation": "Valid reference tool replay does not prove the interactive customer will accept the reference. Zero reward here is not evidence of broken tool execution.",
+      "evidence": "retail_135/trajectory_0/完整对话与工具调用.txt"
+    },
+    {
+      "task_id": "retail_136",
+      "seeds": [
+        42,
+        44
+      ],
+      "category": "reference_state_payment_choice_mismatch",
+      "observed": "Both exchange write targets executed successfully without tool errors. Exact replay differs from reference only in exchange_payment_method_id on the two target orders: gift card versus credit card. Customer confirmed the gift-card proposal.",
+      "policy": "Gift-card price-difference payment/refund is permitted by original policy and tool.",
+      "interpretation": "Original strict DB scorer returns 0; do not relabel or change it in this experiment. It does not imply exchanges were never requested.",
+      "evidence": "retail_136/trajectory_0/score_replay.json"
+    },
+    {
+      "task_id": "retail_135",
+      "seeds": [
+        44
+      ],
+      "category": "format_error_recovered",
+      "observed": "Generated two opening tool_call tags with one closing tag; strict parser rejected it and one temperature-0 retry recovered a single action.",
+      "interpretation": "One observed protocol retry, not the primary cause of the four zero scores.",
+      "evidence": "retail_135/trajectory_2/events.jsonl"
+    },
+    {
+      "task_id": "retail_135",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "category": "qualitative_arithmetic_errors",
+      "observed": "Some assistant explanations gave incorrect size-change differences. From actual returned prices the correct net increase is (159.92-149.48)+(154.75-158.67)=6.52. Seed45 used calculate and gave 6.52.",
+      "interpretation": "Additional model weakness outside the current deterministic reward scope; no reward adjustment made."
+    },
+    {
+      "task_id": "retail_113",
+      "seeds": [
+        42
+      ],
+      "category": "unsupported_procedure_claim",
+      "observed": "Assistant claimed Visa details would need to be provided again, despite an existing on-file payment method being available.",
+      "interpretation": "Business success does not certify every natural-language claim."
+    },
+    {
+      "task_id": "retail_145",
+      "seeds": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "invented_authentication_parameter_recovered",
+      "observed": "All four initially called find_user_id_by_name_zip with zip=20001 even though the customer had only provided name, not the zip. All received User not found, then recovered via the known email.",
+      "interpretation": "Real model parameter guessing; final-success reward does not separately penalize this recoverable query error.",
+      "evidence": "retail_145/trajectory_0/events.jsonl"
+    },
+    {
+      "task_id": "retail_145",
+      "seeds": [
+        44
+      ],
+      "category": "wrong_business_write_parameter",
+      "observed": "Agent proposed and customer confirmed Suite 200, but modify_pending_order_address for #W1221555 sent Suite 001. Other writes used Suite 200. The valid schema allowed the wrong address; no correction occurred before termination.",
+      "interpretation": "Genuine model execution error, correctly assigned original zero reward; distinct from reference ambiguity.",
+      "evidence": "retail_145/trajectory_2/完整对话与工具调用.txt"
+    }
+  ],
+  "infrastructure_attempt": {
+    "task_id": "retail_136",
+    "seed": 44,
+    "original": "retail_136/trajectory_2",
+    "error": "Balance GET ConnectionError before next customer POST",
+    "treatment": "Preserved as unscored infrastructure failure; retry from episode start in recovery_01 using same opening and seed; completed seeds42/43 untouched."
+  },
+  "completion": "completion.json",
+  "source_changes": false
+}

@@ -1,0 +1,57 @@
+{
+  "retail_210": {
+    "decision": "quarantine",
+    "reason": "ambiguous_original_jacket_and_open_replacement_options",
+    "evidence": "原文把实际黑色L码外套称为蓝色，允许红S或其他navy规格，金标准只接受红L；未唯一限定新规格。"
+  },
+  "retail_340": {
+    "decision": "quarantine",
+    "reason": "open_sneaker_variant_choice",
+    "evidence": "原文允许gray或不同尺码，根据库存再选，未唯一指定单一新商品。"
+  },
+  "retail_372": {
+    "decision": "quarantine",
+    "reason": "open_portable_charger_variant_choice",
+    "evidence": "原文要求不同容量/颜色/输出，愿意听多个选项；不能仅凭金标准设定最终偏好。"
+  },
+  "retail_388": {
+    "decision": "quarantine",
+    "reason": "exchange_after_execution_size_change_ambiguity",
+    "evidence": "原文允许客服处理L码换货后顾客再改成XL，而工具每订单只允许换货一次；金标准XL不能公平覆盖两条合法时序。"
+  },
+  "retail_249": {
+    "decision": "quarantine",
+    "reason": "delivered_order_count_and_refund_source_conflict",
+    "evidence": "Details先写1笔已送达订单，又写实际2笔且原支付gift card/PayPal；快照与参考退款credit card需澄清。"
+  },
+  "retail_306": {
+    "decision": "quarantine",
+    "reason": "previous_exchange_state_and_return_eligibility_conflict",
+    "evidence": "原文称背包以前已换货不能退，参考却退该订单；需核对初始换货状态及政策，不能把已执行当语义正确。"
+  },
+  "retail_334": {
+    "decision": "quarantine",
+    "reason": "explicit_tshirt_modification_goal_omitted",
+    "evidence": "任务明确要求最终将T-Shirt改为L，参考操作只有两笔付款修改。"
+  },
+  "retail_374": {
+    "decision": "quarantine",
+    "reason": "explicit_puzzle_modification_goal_omitted",
+    "evidence": "任务明确要求更容易、更少片数的拼图，参考操作只有地址修改。"
+  },
+  "retail_430": {
+    "decision": "quarantine",
+    "reason": "order_inventory_and_cancel_all_goal_conflict",
+    "evidence": "Details称总共3笔订单/2笔pending，又称第三笔也pending；取消所有pending与保留第三笔改付款互相矛盾。"
+  },
+  "retail_329": {
+    "decision": "quarantine",
+    "reason": "multiple_saved_profile_addresses_not_supported_by_snapshot",
+    "evidence": "原文要求更新账户内三个saved地址，当前用户快照只有一个default address；不能猜测未提供的其他地址或新增字段。"
+  },
+  "retail_479": {
+    "decision": "quarantine",
+    "reason": "exchange_target_changes_after_tool_execution",
+    "evidence": "User Goals明确在6mm换货已执行后再改为5mm TPE；一次换货政策与单一最终金标准不足以覆盖该时序。"
+  }
+}

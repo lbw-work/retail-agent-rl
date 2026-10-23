@@ -1,0 +1,12 @@
+model_path = "models/qwen3-4b-mlx4bit"
+sft_run_dir = "outputs/downloads/sft_first_20261011_200837/outputs/sft/sft_first_20261011_200837"
+tasks = "data/versions/retail_rl_v3/processed/rl_dev.jsonl"
+review_manifest = "data/versions/retail_rl_v3/manifests/review.json"
+all_reviewed_dev = true
+seed = 42
+max_assistant_actions = 24
+max_new_tokens_per_action = 512
+max_context_tokens = 16384
+max_consecutive_tool_errors = 3
+# 预留首次中断试验的费用；本次评测含中断记录总上限仍为 1 元。
+api_additional_limit_cny = 0.98

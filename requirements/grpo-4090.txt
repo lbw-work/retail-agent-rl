@@ -1,0 +1,4 @@
+# CUDA 单卡 GRPO；不启用 SFT 的 Liger 损失路径。
+-r grpo.txt
+bitsandbytes==0.48.1
+requests==2.34.2

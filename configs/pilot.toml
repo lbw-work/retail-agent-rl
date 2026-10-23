@@ -1,0 +1,22 @@
+status = "rl_v3_dev_pilot_ready_unrun"
+backend = "mlx_local_4bit"
+model_path = "models/qwen3-4b-mlx4bit"
+tasks = "data/versions/retail_rl_v3/processed/rl_dev.jsonl"
+review_manifest = "data/versions/retail_rl_v3/manifests/review.json"
+output = "outputs/pilot/original_rl_v3_traces.jsonl"
+max_assistant_actions = 24
+max_new_tokens_per_action = 512
+max_context_tokens = 16384
+max_consecutive_tool_errors = 3
+api_limit_cny = 1.0
+seed = 42
+
+[pricing]
+checked_date = "2026-10-10"
+source = "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+model_version_documented = "DeepSeek-V4.1-Flash"
+# 首次试跑采用高峰费率做上界记账，实际账单优先核对账户扣费。
+currency = "CNY"
+input_miss_per_million = 2.0
+input_hit_per_million = 0.04
+output_per_million = 8.0

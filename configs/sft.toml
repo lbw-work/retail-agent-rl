@@ -1,0 +1,36 @@
+status = "4090_qlora_configured_cuda_unbenchmarked"
+model_id = "Qwen/Qwen3-4B"
+model_path = "models/qwen3-4b"
+prepared_dir = "data/prepared/retail_full_v2_sft"
+seed = 42
+enable_thinking = false
+train_file = "data/versions/retail_full_v2/processed/sft_train.jsonl"
+validation_file = "data/versions/retail_full_v2/processed/sft_dev.jsonl"
+output_dir = "outputs/sft"
+# 当前完整训练候选池；实际训练量须通过预算试跑确定。
+target_turn_samples = 5682
+num_train_epochs = 1
+learning_rate = 0.0001
+per_device_train_batch_size = 1
+gradient_accumulation_steps = 8
+gradient_checkpointing = true
+# 离线编码保留完整 16K 候选；4090 首轮只筛选完整长度 <=8K 的样本。
+max_sequence_length = 16384
+max_example_tokens = 8192
+use_liger_kernel = true
+save_steps = 25
+save_total_limit = 2
+loss_scope = "target_assistant_turn_only"
+include_thinking_target = false
+
+[quantization]
+load_in_4bit = true
+quant_type = "nf4"
+double_quant = true
+compute_dtype = "bfloat16"
+
+[lora]
+r = 16
+alpha = 32
+dropout = 0.0
+target_modules = ["q_proj", "k_proj", "v_proj", "o_proj"]

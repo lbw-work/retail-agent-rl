@@ -1,0 +1,55 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+.venv*/
+.idea/
+.vscode/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+*.log
+
+# Datasets, weights and experiment output: fetch pinned bundles from Hugging Face.
+/data/raw/*
+!/data/raw/.gitkeep
+/data/prepared/*
+!/data/prepared/.gitkeep
+/data/versions/*
+!/data/versions/.gitkeep
+/data/databases/*
+!/data/databases/.gitkeep
+/models/*
+!/models/.gitkeep
+/outputs/*
+!/outputs/.gitkeep
+!/outputs/review/
+/outputs/review/*
+!/outputs/review/rl_full_20261015/
+/outputs/review/rl_full_20261015/*
+!/outputs/review/rl_full_20261015/facts.json
+!/outputs/review/rl_full_20261015/semantic_checks.json
+!/outputs/review/rl_full_20261015/manual_decisions.json
+
+# Only the pinned tau2 runtime and its required data are vendored.
+/third_party/*
+!/third_party/.gitkeep
+!/third_party/licenses/
+!/third_party/tau2-bench/
+/third_party/tau2-bench/*
+!/third_party/tau2-bench/LICENSE
+!/third_party/tau2-bench/src/
+!/third_party/tau2-bench/data/
+/third_party/tau2-bench/data/*
+!/third_party/tau2-bench/data/tau2/
+/third_party/tau2-bench/data/tau2/*
+!/third_party/tau2-bench/data/tau2/domains/
+!/third_party/tau2-bench/data/tau2/user_simulator/
+
+# Historical machine-specific transfer instructions remain local.
+/docs/4090*操作手册.md
+/docs/新服务器_GRPO重建与LogProb验收_20261016.md
+/docs/汇报设计记录.md

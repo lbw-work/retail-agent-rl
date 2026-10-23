@@ -1,0 +1,5927 @@
+{
+  "method": "fixed_prose_and_snapshot_contracts_not_complete_natural_language_proof",
+  "counts": {
+    "open_variant_choice_with_single_gold_requires_review": 121,
+    "replacement_options_not_explicitly_grounded_requires_review": 147,
+    "claimed_pending_order_count_conflicts_with_snapshot": 7,
+    "claimed_delivered_order_count_conflicts_with_snapshot": 45,
+    "requested_business_without_reference_requires_review:return_delivered_order_items": 27,
+    "requested_business_without_reference_requires_review:modify_pending_order_payment": 26,
+    "post_execution_exchange_target_change_requires_review": 5,
+    "explicit_alternative_variants_with_single_gold_requires_review": 7,
+    "explicit_same_size_violated": 3,
+    "payment_revert_request_not_represented_requires_review": 8,
+    "explicit_escalation_or_compensation_goal_not_scored_by_database": 15,
+    "requested_business_without_reference_requires_review:exchange_delivered_order_items": 30,
+    "item_modification_goal_without_reference_requires_review": 42,
+    "profile_address_goal_without_reference_requires_review": 6,
+    "explicit_same_color_violated": 2,
+    "all_pending_payment_goal_incomplete_requires_review": 1,
+    "requested_business_without_reference_requires_review:cancel_pending_order": 10,
+    "order_address_goal_without_reference_requires_review": 7,
+    "scenario_prose_authentication_zip_conflicts_with_snapshot": 3
+  },
+  "cases": [
+    {
+      "id": "retail_10",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9686481",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_100",
+      "split": "train",
+      "flags": [
+        "claimed_pending_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_pending": 2
+        },
+        {
+          "order_id": "#W4597748",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black",
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_101",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3688153",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_102",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_103",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_104",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_105",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_106",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6708000",
+          "product": "Laptop",
+          "ungrounded_options": {
+            "screen size": "15-inch",
+            "color": "space grey"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_108",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_109",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2483561",
+          "product": "Action Camera",
+          "ungrounded_options": {
+            "color": "silver"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_11",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "claimed_pending_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "post_execution_exchange_target_change_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 3
+        },
+        {
+          "claim": 3,
+          "actual_pending": 2
+        },
+        {
+          "order_id": "#W3571328",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "purple",
+            "size": "XL"
+          }
+        },
+        {
+          "order_id": "#W3571328",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        },
+        {
+          "order_id": "#W7599024",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XXL",
+            "style": "crew neck"
+          }
+        },
+        {
+          "order_id": "#W7599024",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_110",
+      "split": "train",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review",
+        "explicit_same_size_violated",
+        "open_variant_choice_with_single_gold_requires_review",
+        "payment_revert_request_not_represented_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6213781",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_112",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_113",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_114",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8751865",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "switch type": "linear",
+            "backlight": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_121",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_122",
+      "split": "train",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_123",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5307928",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_124",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_125",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_126",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "payment_revert_request_not_represented_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_127",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_128",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_129",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W3829576",
+          "product": "Laptop",
+          "unique_available_variant_for_explicit_options": {
+            "processor": "i5",
+            "storage": "256GB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_13",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "profile_address_goal_without_reference_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_131",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_132",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_134",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_135",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W7926664",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_136",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_137",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6822737",
+          "product": "Bluetooth Speaker",
+          "ungrounded_options": {
+            "battery life": "20 hours",
+            "water resistance": "yes"
+          }
+        },
+        {
+          "order_id": "#W6695405",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "storage": "128GB",
+            "color": "gold"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_139",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6482039",
+          "product": "Smart Watch",
+          "ungrounded_options": {
+            "color": "gold",
+            "band material": "leather",
+            "display": "AMOLED"
+          }
+        },
+        {
+          "order_id": "#W6482039",
+          "product": "Wall Clock",
+          "ungrounded_options": {
+            "type": "analog"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_141",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4898386",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "size": "60%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_142",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_143",
+      "split": "train",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_145",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_148",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_149",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8983250",
+          "product": "Hiking Boots",
+          "ungrounded_options": {
+            "size": "12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_150",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_153",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_154",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1343758",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black",
+            "size": "XXL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_155",
+      "split": "train",
+      "flags": [
+        "profile_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_156",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5356599",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "theme": "art",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_157",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_158",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_159",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4929194",
+          "product": "Bluetooth Speaker",
+          "ungrounded_options": {
+            "color": "red",
+            "battery life": "20 hours"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_16",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_160",
+      "split": "train",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8453011",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "L",
+            "style": "v-neck"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_163",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_165",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1204541",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "color": "navy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_167",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1265410",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_168",
+      "split": "train",
+      "flags": [
+        "claimed_pending_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_pending": 1
+        },
+        {
+          "order_id": "#W1638435",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "optical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_169",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_170",
+      "split": "train",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2352438",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black",
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_171",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_172",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8335943",
+          "product": "Grill",
+          "ungrounded_options": {
+            "size": "large"
+          }
+        },
+        {
+          "order_id": "#W8335943",
+          "product": "Wristwatch",
+          "ungrounded_options": {
+            "dial color": "white"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_174",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_175",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_178",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2208855",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "storage": "32GB"
+          }
+        },
+        {
+          "order_id": "#W2612236",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "backlight": "RGB",
+            "size": "60%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_179",
+      "split": "train",
+      "flags": [
+        "explicit_same_color_violated",
+        "explicit_same_size_violated",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9363086",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        },
+        {
+          "order_id": "#W5704897",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_18",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6748917",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_180",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_181",
+      "split": "train",
+      "flags": [
+        "all_pending_payment_goal_incomplete_requires_review"
+      ],
+      "evidence": [
+        {
+          "payment_targets": [
+            "#W5460995"
+          ],
+          "initial_pending": [
+            "#W5460995",
+            "#W6455871"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retail_182",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W8638813",
+          "product": "Laptop",
+          "unique_available_variant_for_explicit_options": {
+            "screen size": "17-inch",
+            "processor": "i7",
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_185",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_186",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_187",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_188",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2864420",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_19",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_190",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_191",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7600029",
+          "product": "Tea Kettle",
+          "ungrounded_options": {
+            "capacity": "2 liters"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_192",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_194",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9628814",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "theme": "art",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_195",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:cancel_pending_order"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6196527",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black"
+          }
+        },
+        {
+          "order_id": "#W3775487",
+          "product": "Sneakers",
+          "ungrounded_options": {
+            "size": "10",
+            "color": "gray",
+            "material": "leather"
+          }
+        },
+        {
+          "order_id": "#W9282545",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "size": "10",
+            "color": "white",
+            "material": "leather",
+            "sole": "EVA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_196",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_197",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_199",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W4308803",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "9",
+            "color": "black"
+          }
+        },
+        {
+          "order_id": "#W4308803",
+          "product": "T-Shirt",
+          "unique_available_variant_for_explicit_options": {
+            "color": "black",
+            "size": "XXL",
+            "material": "polyester"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_2",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_20",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_200",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_201",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8877958",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_204",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_207",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_208",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_21",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_210",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_211",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_212",
+      "split": "train",
+      "flags": [
+        "profile_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_213",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_214",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_216",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_218",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_219",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_220",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_222",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_223",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_224",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_225",
+      "split": "train",
+      "flags": [
+        "payment_revert_request_not_represented_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_228",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_23",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_232",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_233",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5427172",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "S",
+            "material": "polyester",
+            "style": "v-neck"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_238",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4002882",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_239",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5522216",
+          "product": "Wall Clock",
+          "ungrounded_options": {
+            "color": "wood"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_24",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_241",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5437974",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "capacity": "4 cups",
+            "features": "auto shutoff"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_246",
+      "split": "train",
+      "flags": [
+        "order_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_247",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8863815",
+          "product": "Office Chair",
+          "ungrounded_options": {
+            "color": "gray",
+            "backrest height": "high-back"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_249",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_25",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_252",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_253",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_254",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_256",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_257",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_258",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_259",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "payment_revert_request_not_represented_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9600764",
+          "product": "Backpack",
+          "unique_available_variant_for_explicit_options": {
+            "color": "navy"
+          }
+        },
+        {
+          "order_id": "#W4981543",
+          "product": "Backpack",
+          "ungrounded_options": {
+            "size": "medium",
+            "compartment": "laptop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_261",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_262",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_264",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W7361243",
+          "product": "Yoga Mat",
+          "unique_available_variant_for_explicit_options": {
+            "color": "pink"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_265",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_267",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1980300",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "connectivity": "wired"
+          }
+        },
+        {
+          "order_id": "#W9162208",
+          "product": "Laptop",
+          "unique_available_variant_for_explicit_options": {
+            "processor": "i5",
+            "storage": "256GB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_269",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_270",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_271",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_272",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_274",
+      "split": "train",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_275",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 1
+        },
+        {
+          "order_id": "#W1003978",
+          "product": "Wristwatch",
+          "ungrounded_options": {
+            "strap material": "metal",
+            "dial color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_278",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_280",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_282",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_284",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_285",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7818731",
+          "product": "Garden Hose",
+          "ungrounded_options": {
+            "length": "25ft",
+            "material": "vinyl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_286",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9760830",
+          "product": "Smart Thermostat",
+          "ungrounded_options": {
+            "compatibility": "Amazon Alexa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_287",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_291",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_292",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "profile_address_goal_without_reference_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        },
+        {
+          "order_id": "#W5886607",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "color": "white",
+            "material": "mesh"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_294",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W7172104",
+          "product": "Fleece Jacket",
+          "unique_available_variant_for_explicit_options": {
+            "size": "L",
+            "zipper": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_295",
+      "split": "train",
+      "flags": [
+        "explicit_same_size_violated",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9799653",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_297",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_298",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7009508",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_299",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_3",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_301",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_302",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5287927",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "S",
+            "material": "polyester"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_304",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W8346428",
+          "product": "T-Shirt",
+          "unique_available_variant_for_explicit_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_306",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_308",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_309",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_31",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_311",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_312",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9496852",
+          "product": "Smart Watch",
+          "ungrounded_options": {
+            "display": "AMOLED"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_313",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5945878",
+          "product": "Headphones",
+          "ungrounded_options": {
+            "type": "over-ear"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_314",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_316",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3710574",
+          "product": "Cycling Helmet",
+          "ungrounded_options": {
+            "ventilation": "low"
+          }
+        },
+        {
+          "order_id": "#W5674366",
+          "product": "Patio Umbrella",
+          "unique_available_variant_for_explicit_options": {
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_317",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_318",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5037536",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "color": "gold"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_319",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5402745",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_320",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_321",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_323",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_324",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_326",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_327",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_328",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_33",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_333",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_334",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_336",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9853293",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XXL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_337",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_338",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3794156",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        },
+        {
+          "order_id": "#W8821456",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "blue",
+            "style": "v-neck"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_34",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2780043",
+          "product": "Hiking Boots",
+          "ungrounded_options": {
+            "size": "8",
+            "waterproof": "no"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_340",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W7712892",
+          "product": "Sneakers",
+          "unique_available_variant_for_explicit_options": {
+            "color": "gray"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_342",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 1
+        },
+        {
+          "order_id": "#W7811956",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black",
+            "style": "crew neck"
+          }
+        },
+        {
+          "order_id": "#W7811956",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_343",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_344",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_345",
+      "split": "train",
+      "flags": [
+        "explicit_same_color_violated"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_346",
+      "split": "train",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7343854",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_347",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_348",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_349",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6923145",
+          "product": "Smartphone",
+          "ungrounded_options": {
+            "RAM": "8GB",
+            "screen size": "5.8-inch"
+          }
+        },
+        {
+          "order_id": "#W6923145",
+          "product": "Perfume",
+          "ungrounded_options": {
+            "scent family": "woody",
+            "size": "100ml"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_35",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_351",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_352",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_354",
+      "split": "train",
+      "flags": [
+        "claimed_pending_order_count_conflicts_with_snapshot",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_pending": 1
+        },
+        {
+          "order_id": "#W1108853",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "backlight": "RGB"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_355",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_356",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8143897",
+          "product": "Laptop",
+          "ungrounded_options": {
+            "processor": "i7",
+            "storage": "1TB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_359",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_36",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_361",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_362",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6832040",
+          "product": "Wireless Earbuds",
+          "ungrounded_options": {
+            "water resistance": "IPX4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_365",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_367",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9455517",
+          "product": "Tea Kettle",
+          "ungrounded_options": {
+            "capacity": "2 liters"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_368",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8972280",
+          "product": "Sunglasses",
+          "ungrounded_options": {
+            "lens color": "brown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_369",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8714220",
+          "product": "Tea Kettle",
+          "ungrounded_options": {
+            "capacity": "2 liters",
+            "stovetop compatibility": "gas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_37",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_370",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9636291",
+          "product": "Laptop",
+          "ungrounded_options": {
+            "processor": "i7",
+            "storage": "1TB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_371",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_372",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W2897618",
+          "product": "Portable Charger",
+          "unique_available_variant_for_explicit_options": {
+            "output": "USB-C",
+            "color": "blue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_374",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W5163239",
+          "product": "Jigsaw Puzzle",
+          "unique_available_variant_for_explicit_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_376",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_378",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_38",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_380",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_381",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_382",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_383",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_385",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "profile_address_goal_without_reference_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_386",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_387",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1615482",
+          "product": "Espresso Machine",
+          "ungrounded_options": {
+            "capacity": "1L",
+            "type": "capsule"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_388",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_389",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_39",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7467083",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_392",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_393",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9708586",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_394",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3336287",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "backlight": "none"
+          }
+        },
+        {
+          "order_id": "#W4936002",
+          "product": "Digital Camera",
+          "ungrounded_options": {
+            "resolution": "30MP",
+            "zoom": "5x",
+            "storage": "CF card"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_396",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_397",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_398",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_399",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_40",
+      "split": "train",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "requested_business_without_reference_requires_review:cancel_pending_order",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_401",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_402",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3559390",
+          "product": "Water Bottle",
+          "ungrounded_options": {
+            "capacity": "750ml"
+          }
+        },
+        {
+          "order_id": "#W5948782",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_404",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_407",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_409",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_410",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_411",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5366276",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "color": "black",
+            "zipper": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_412",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_413",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_416",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1234163",
+          "product": "Smart Watch",
+          "ungrounded_options": {
+            "display": "LCD"
+          }
+        },
+        {
+          "order_id": "#W9964000",
+          "product": "Laptop",
+          "unique_available_variant_for_explicit_options": {
+            "processor": "i5",
+            "storage": "256GB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_418",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_419",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_42",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5677239",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_421",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_423",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5898335",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "backlight": "white"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_425",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9577883",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_426",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7820335",
+          "product": "Action Camera",
+          "ungrounded_options": {
+            "waterproof": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_428",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_429",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_430",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_433",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1513524",
+          "product": "Backpack",
+          "ungrounded_options": {
+            "compartment": "camera"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_435",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2594740",
+          "product": "Smart Watch",
+          "ungrounded_options": {
+            "display": "LCD"
+          }
+        },
+        {
+          "order_id": "#W8055854",
+          "product": "Laptop",
+          "unique_available_variant_for_explicit_options": {
+            "processor": "i5",
+            "storage": "256GB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_436",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_438",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_439",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6729981",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "connectivity": "wired"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_44",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_441",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_442",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_443",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_444",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_445",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_446",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_447",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5752813",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        },
+        {
+          "order_id": "#W5752813",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "size": "10",
+            "color": "white",
+            "material": "leather",
+            "sole": "EVA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_448",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_449",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_453",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_454",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_455",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "scenario_prose_authentication_zip_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claimed_authentication_zip": "76165",
+          "actual_zip": "76156"
+        },
+        {
+          "order_id": "#W3673258",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "theme": "art",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_456",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_457",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_458",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_46",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_461",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 3
+        }
+      ]
+    },
+    {
+      "id": "retail_466",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_467",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_468",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9426961",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_469",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_470",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:cancel_pending_order"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_471",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W6158913",
+          "product": "Laptop",
+          "unique_available_variant_for_explicit_options": {
+            "processor": "i5",
+            "storage": "256GB SSD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_472",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_473",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_474",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_475",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2647285",
+          "product": "Action Camera",
+          "ungrounded_options": {
+            "waterproof": "no"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_476",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_477",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8066957",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "storage": "128GB",
+            "color": "gold"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_48",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:cancel_pending_order",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_481",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_483",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_485",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_488",
+      "split": "train",
+      "flags": [
+        "payment_revert_request_not_represented_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_489",
+      "split": "train",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2359982",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_490",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_491",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9986954",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_494",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_499",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6687750",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "screen size": "7-inch"
+          }
+        },
+        {
+          "order_id": "#W4153031",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "switch type": "linear",
+            "backlight": "RGB"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_5",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3795026",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "features": "built-in grinder"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_500",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "order_address_goal_without_reference_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5648508",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "backlight": "white"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_502",
+      "split": "train",
+      "flags": [
+        "claimed_pending_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_pending": 3
+        }
+      ]
+    },
+    {
+      "id": "retail_504",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3686609",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_505",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1899509",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "L",
+            "style": "v-neck"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_506",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_507",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_508",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3865208",
+          "product": "Bookshelf",
+          "ungrounded_options": {
+            "color": "brown",
+            "height": "6 ft"
+          }
+        },
+        {
+          "order_id": "#W3865208",
+          "product": "Office Chair",
+          "ungrounded_options": {
+            "material": "leather",
+            "backrest height": "high-back"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_511",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_513",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6363875",
+          "product": "Luggage Set",
+          "ungrounded_options": {
+            "piece count": "4-piece",
+            "material": "softshell"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_514",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_520",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_522",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_523",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_524",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        },
+        {
+          "order_id": "#W5853949",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "size": "10",
+            "color": "white"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_525",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6374828",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_526",
+      "split": "train",
+      "flags": [
+        "order_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_527",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_528",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_529",
+      "split": "train",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_53",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W2300223",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "9",
+            "color": "white",
+            "material": "mesh"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_530",
+      "split": "train",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1578085",
+          "product": "Electric Toothbrush",
+          "ungrounded_options": {
+            "speed settings": "high",
+            "battery type": "rechargeable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_531",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_532",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "profile_address_goal_without_reference_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_533",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1185446",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_536",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8236188",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "color": "black",
+            "capacity": "8 cups",
+            "type": "espresso",
+            "features": "built-in grinder"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_538",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_539",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_54",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_540",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_541",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4954663",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "screen size": "10-inch",
+            "storage": "64GB",
+            "color": "silver"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_542",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_544",
+      "split": "train",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5566579",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_545",
+      "split": "train",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_546",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_548",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 1
+        },
+        {
+          "order_id": "#W5606958",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL",
+            "material": "cotton"
+          }
+        },
+        {
+          "order_id": "#W5606958",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_549",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_55",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_550",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_551",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_552",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2512851",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_554",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_558",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W8129843",
+          "product": "Portable Charger",
+          "unique_available_variant_for_explicit_options": {
+            "output": "Wireless",
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_56",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8660867",
+          "product": "Electric Kettle",
+          "ungrounded_options": {
+            "capacity": "1L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_560",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_561",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_563",
+      "split": "train",
+      "flags": [
+        "payment_revert_request_not_represented_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_58",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_59",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_6",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_60",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_61",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7844131",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_62",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9955720",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_64",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_66",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_68",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_69",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_7",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7621586",
+          "product": "Backpack",
+          "ungrounded_options": {
+            "material": "polyester"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_70",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_71",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9029454",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "material": "cotton"
+          }
+        },
+        {
+          "order_id": "#W7973119",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "zipper": "half"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_72",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_74",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4572708",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_76",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_77",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8602983",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "black",
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_78",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_80",
+      "split": "train",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "item_modification_goal_without_reference_requires_review",
+        "payment_revert_request_not_represented_requires_review"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_84",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_87",
+      "split": "train",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W3500287",
+          "product": "Yoga Mat",
+          "unique_available_variant_for_explicit_options": {
+            "color": "green"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_88",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1924600",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_90",
+      "split": "train",
+      "flags": [
+        "order_address_goal_without_reference_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8640188",
+          "product": "Indoor Security Camera",
+          "ungrounded_options": {
+            "resolution": "4K"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_92",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7647193",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "M",
+            "style": "crew neck"
+          }
+        },
+        {
+          "order_id": "#W7647193",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "XL",
+            "color": "navy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_93",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4536934",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "capacity": "4 cups"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_94",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_95",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8194436",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "theme": "art",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_96",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_97",
+      "split": "train",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_98",
+      "split": "train",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3868395",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        },
+        {
+          "order_id": "#W3868395",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "size": "10",
+            "color": "white",
+            "material": "leather",
+            "sole": "EVA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_99",
+      "split": "train",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_1",
+      "split": "dev",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6321162",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        },
+        {
+          "order_id": "#W6321162",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_117",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3962975",
+          "product": "Fleece Jacket",
+          "unique_available_variant_for_explicit_options": {
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_119",
+      "split": "dev",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_14",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1910265",
+          "product": "Mechanical Keyboard",
+          "ungrounded_options": {
+            "switch type": "linear"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_144",
+      "split": "dev",
+      "flags": [
+        "order_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_147",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7682199",
+          "product": "Hiking Boots",
+          "ungrounded_options": {
+            "size": "9",
+            "waterproof": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_161",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_164",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3281042",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_173",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_183",
+      "split": "dev",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_193",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_205",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W4217974",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "purple"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_206",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7295692",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "color": "yellow"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_209",
+      "split": "dev",
+      "flags": [
+        "post_execution_exchange_target_change_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_215",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_221",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_229",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_230",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_248",
+      "split": "dev",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_251",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_263",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_266",
+      "split": "dev",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_268",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_279",
+      "split": "dev",
+      "flags": [
+        "claimed_pending_order_count_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_pending": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_288",
+      "split": "dev",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:cancel_pending_order"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_30",
+      "split": "dev",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_300",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:cancel_pending_order",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_32",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "scenario_prose_authentication_zip_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claimed_authentication_zip": "23986",
+          "actual_zip": "22002"
+        },
+        {
+          "order_id": "#W6223986",
+          "product": "Running Shoes",
+          "ungrounded_options": {
+            "color": "yellow",
+            "material": "synthetic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_329",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_330",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2864986",
+          "product": "Electric Kettle",
+          "ungrounded_options": {
+            "capacity": "1L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_332",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7438327",
+          "product": "Backpack",
+          "ungrounded_options": {
+            "compartment": "laptop"
+          }
+        },
+        {
+          "order_id": "#W2214174",
+          "product": "Patio Umbrella",
+          "unique_available_variant_for_explicit_options": {
+            "color": "blue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_335",
+      "split": "dev",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_339",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3483168",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "capacity": "4 cups",
+            "type": "espresso",
+            "features": "timer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_341",
+      "split": "dev",
+      "flags": [
+        "scenario_prose_authentication_zip_conflicts_with_snapshot"
+      ],
+      "evidence": [
+        {
+          "claimed_authentication_zip": "11211",
+          "actual_zip": "11701"
+        }
+      ]
+    },
+    {
+      "id": "retail_360",
+      "split": "dev",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8786742",
+          "product": "Headphones",
+          "unique_available_variant_for_explicit_options": {
+            "color": "red"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_364",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_366",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_375",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_390",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_391",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_4",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_41",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7619075",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_417",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_422",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_427",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_451",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_452",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_459",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5529118",
+          "product": "Bookshelf",
+          "ungrounded_options": {
+            "color": "brown",
+            "height": "6 ft"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_463",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_464",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_479",
+      "split": "dev",
+      "flags": [
+        "post_execution_exchange_target_change_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_482",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_493",
+      "split": "dev",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_495",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_496",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_497",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_501",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6845275",
+          "product": "Headphones",
+          "ungrounded_options": {
+            "connectivity": "wired"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_509",
+      "split": "dev",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_51",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9528582",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "zipper": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_516",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9838446",
+          "product": "Cycling Helmet",
+          "ungrounded_options": {
+            "ventilation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_517",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_518",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1646775",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        },
+        {
+          "order_id": "#W1646775",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_521",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6441079",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "color": "purple"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_534",
+      "split": "dev",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3502323",
+          "product": "Headphones",
+          "unique_available_variant_for_explicit_options": {
+            "color": "red"
+          }
+        },
+        {
+          "order_id": "#W9266532",
+          "product": "Laptop",
+          "ungrounded_options": {
+            "processor": "i9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_535",
+      "split": "dev",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_537",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_543",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_562",
+      "split": "dev",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W4874008",
+          "product": "T-Shirt",
+          "unique_available_variant_for_explicit_options": {
+            "color": "red",
+            "size": "L"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_65",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_67",
+      "split": "dev",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_75",
+      "split": "dev",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_79",
+      "split": "dev",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W1145597",
+          "product": "Wireless Earbuds",
+          "unique_available_variant_for_explicit_options": {
+            "color": "blue",
+            "battery life": "6 hours"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_83",
+      "split": "dev",
+      "flags": [
+        "requested_business_without_reference_requires_review:cancel_pending_order",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W3901431",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "10",
+            "material": "leather"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_85",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_86",
+      "split": "dev",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_111",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_115",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_12",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_133",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_138",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_140",
+      "split": "test",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W2005559",
+          "product": "Gaming Mouse",
+          "unique_available_variant_for_explicit_options": {
+            "color": "white",
+            "connectivity": "wired"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_15",
+      "split": "test",
+      "flags": [
+        "explicit_alternative_variants_with_single_gold_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_151",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_166",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_17",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_176",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_203",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_22",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7422269",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "L",
+            "style": "v-neck"
+          }
+        },
+        {
+          "order_id": "#W6414994",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "S",
+            "zipper": "half"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_226",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_231",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_235",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_236",
+      "split": "test",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W2439761",
+          "product": "Sunglasses",
+          "unique_available_variant_for_explicit_options": {
+            "lens color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_237",
+      "split": "test",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "post_execution_exchange_target_change_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_242",
+      "split": "test",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 1
+        }
+      ]
+    },
+    {
+      "id": "retail_243",
+      "split": "test",
+      "flags": [
+        "requested_business_without_reference_requires_review:cancel_pending_order",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_245",
+      "split": "test",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7907298",
+          "product": "Smart Watch",
+          "ungrounded_options": {
+            "color": "gold",
+            "band material": "leather"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_255",
+      "split": "test",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 2,
+          "actual_delivered": 0
+        },
+        {
+          "order_id": "#W4959769",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "sensor type": "laser"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_260",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5231496",
+          "product": "T-Shirt",
+          "ungrounded_options": {
+            "size": "S",
+            "material": "polyester",
+            "style": "v-neck"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_27",
+      "split": "test",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W9432509",
+          "product": "Notebook",
+          "unique_available_variant_for_explicit_options": {
+            "size": "A5"
+          }
+        },
+        {
+          "order_id": "#W9432509",
+          "product": "Notebook",
+          "unique_available_variant_for_explicit_options": {
+            "size": "A5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_273",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_276",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:cancel_pending_order"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9210516",
+          "product": "Skateboard",
+          "ungrounded_options": {
+            "design": "graphic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_277",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_28",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_281",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_283",
+      "split": "test",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2912387",
+          "product": "Wristwatch",
+          "ungrounded_options": {
+            "strap material": "silicone"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_29",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_290",
+      "split": "test",
+      "flags": [
+        "payment_revert_request_not_represented_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_305",
+      "split": "test",
+      "flags": [
+        "post_execution_exchange_target_change_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8115991",
+          "product": "Yoga Mat",
+          "unique_available_variant_for_explicit_options": {
+            "thickness": "6mm"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_315",
+      "split": "test",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W5739556",
+          "product": "Fleece Jacket",
+          "unique_available_variant_for_explicit_options": {
+            "color": "black",
+            "zipper": "full"
+          }
+        },
+        {
+          "order_id": "#W5739556",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "color": "white",
+            "material": "mesh"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_322",
+      "split": "test",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_350",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_353",
+      "split": "test",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_358",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_363",
+      "split": "test",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_373",
+      "split": "test",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8776976",
+          "product": "Cycling Helmet",
+          "ungrounded_options": {
+            "color": "blue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_384",
+      "split": "test",
+      "flags": [
+        "claimed_pending_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_pending": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_395",
+      "split": "test",
+      "flags": [
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_400",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_403",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_405",
+      "split": "test",
+      "flags": [
+        "claimed_delivered_order_count_conflicts_with_snapshot",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "claim": 3,
+          "actual_delivered": 2
+        }
+      ]
+    },
+    {
+      "id": "retail_406",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_415",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5020467",
+          "product": "E-Reader",
+          "ungrounded_options": {
+            "screen size": "8-inch",
+            "storage": "32GB"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_43",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7562015",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "theme": "art",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_432",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_434",
+      "split": "test",
+      "flags": [],
+      "evidence": [
+        {
+          "order_id": "#W4803803",
+          "product": "Running Shoes",
+          "unique_available_variant_for_explicit_options": {
+            "size": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_45",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W6368136",
+          "product": "Fleece Jacket",
+          "ungrounded_options": {
+            "size": "XL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_450",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review",
+        "requested_business_without_reference_requires_review:return_delivered_order_items"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W9429394",
+          "product": "Gaming Mouse",
+          "ungrounded_options": {
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_460",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_465",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_478",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_484",
+      "split": "test",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database",
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_49",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W5649804",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_492",
+      "split": "test",
+      "flags": [
+        "order_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_50",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_503",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_515",
+      "split": "test",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W7561815",
+          "product": "Tablet",
+          "ungrounded_options": {
+            "color": "gold"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_519",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_52",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_547",
+      "split": "test",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_553",
+      "split": "test",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_555",
+      "split": "test",
+      "flags": [
+        "explicit_escalation_or_compensation_goal_not_scored_by_database"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_556",
+      "split": "test",
+      "flags": [
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W1514890",
+          "product": "Smartphone",
+          "ungrounded_options": {
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_557",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_559",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W2641158",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "color": "stainless steel",
+            "capacity": "4 cups"
+          }
+        },
+        {
+          "order_id": "#W2641158",
+          "product": "Coffee Maker",
+          "ungrounded_options": {
+            "color": "stainless steel",
+            "capacity": "4 cups"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_57",
+      "split": "test",
+      "flags": [],
+      "evidence": []
+    },
+    {
+      "id": "retail_63",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8437983",
+          "product": "Jigsaw Puzzle",
+          "ungrounded_options": {
+            "pieces": "500",
+            "theme": "art",
+            "difficulty level": "beginner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "retail_73",
+      "split": "test",
+      "flags": [
+        "order_address_goal_without_reference_requires_review"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_82",
+      "split": "test",
+      "flags": [
+        "requested_business_without_reference_requires_review:modify_pending_order_payment"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_89",
+      "split": "test",
+      "flags": [
+        "item_modification_goal_without_reference_requires_review",
+        "requested_business_without_reference_requires_review:cancel_pending_order",
+        "requested_business_without_reference_requires_review:exchange_delivered_order_items"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "retail_91",
+      "split": "test",
+      "flags": [
+        "open_variant_choice_with_single_gold_requires_review",
+        "replacement_options_not_explicitly_grounded_requires_review"
+      ],
+      "evidence": [
+        {
+          "order_id": "#W8704103",
+          "product": "Electric Toothbrush",
+          "ungrounded_options": {
+            "battery type": "rechargeable"
+          }
+        }
+      ]
+    }
+  ]
+}

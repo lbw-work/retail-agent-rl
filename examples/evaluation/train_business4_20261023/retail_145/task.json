@@ -1,0 +1,114 @@
+{
+  "id": "retail_145",
+  "business": "mixed",
+  "businesses": [
+    "modify_pending_order_address",
+    "modify_user_address"
+  ],
+  "difficulty": "pair",
+  "prompt": [
+    {
+      "role": "system",
+      "content": "You are a retail customer service agent. Follow the policy below. In each turn, either send a message to the customer or make exactly one tool call; do not do both. Use the provided tool-call format for tools, and ordinary text when speaking to the customer.\n<policy>\n# Retail agent policy\n\nAs a retail agent, you can help users:\n\n- **cancel or modify pending orders**\n- **return or exchange delivered orders**\n- **modify their default user address**\n- **provide information about their own profile, orders, and related products**\n\nAt the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code. This has to be done even when the user already provides the user id.\n\nOnce the user has been authenticated, you can provide the user with information about order, product, profile information, e.g. help the user look up order id.\n\nYou can only help one user per conversation (but you can handle multiple requests from the same user), and must deny any requests for tasks related to any other user.\n\nBefore taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed.\n\nYou should not make up any information or knowledge or procedures not provided by the user or the tools, or give subjective recommendations or comments.\n\nYou should at most make one tool call at a time, and if you take a tool call, you should not respond to the user at the same time. If you respond to the user, you should not make a tool call at the same time.\n\nYou should deny user requests that are against this policy.\n\nYou should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user.\n\n## Domain basic\n\n- All times in the database are EST and 24 hour based. For example \"02:30:00\" means 2:30 AM EST.\n\n### User\n\nEach user has a profile containing:\n\n- unique user id\n- email\n- default address\n- payment methods.\n\nThere are three types of payment methods: **gift card**, **paypal account**, **credit card**.\n\n### Product\n\nOur retail store has 50 types of products.\n\nFor each **type of product**, there are **variant items** of different **options**.\n\nFor example, for a 't-shirt' product, there could be a variant item with option 'color blue size M', and another variant item with option 'color red size L'.\n\nEach product has the following attributes:\n\n- unique product id\n- name\n- list of variants\n\nEach variant item has the following attributes:\n\n- unique item id\n- information about the value of the product options for this item.\n- availability\n- price\n\nNote: Product ID and Item ID have no relations and should not be confused!\n\n### Order\n\nEach order has the following attributes:\n\n- unique order id\n- user id\n- address\n- items ordered\n- status\n- fullfilments info (tracking id and item ids)\n- payment history\n\nThe status of an order can be: **pending**, **processed**, **delivered**, or **cancelled**.\n\nOrders can have other optional attributes based on the actions that have been taken (cancellation reason, which items have been exchanged, what was the exchane price difference etc)\n\n## Generic action rules\n\nGenerally, you can only take action on pending or delivered orders.\n\nExchange or modify order tools can only be called once per order. Be sure that all items to be changed are collected into a list before making the tool call!!!\n\n## Cancel pending order\n\nAn order can only be cancelled if its status is 'pending', and you should check its status before taking the action.\n\nThe user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. Other reasons are not acceptable.\n\nAfter user confirmation, the order status will be changed to 'cancelled', and the total will be refunded via the original payment method immediately if it is gift card, otherwise in 5 to 7 business days.\n\n## Modify pending order\n\nAn order can only be modified if its status is 'pending', and you should check its status before taking the action.\n\nFor a pending order, you can take actions to modify its shipping address, payment method, or product item options, but nothing else.\n\n### Modify payment\n\nThe user can only choose a single payment method different from the original payment method.\n\nIf the user wants the modify the payment method to gift card, it must have enough balance to cover the total amount.\n\nAfter user confirmation, the order status will be kept as 'pending'. The original payment method will be refunded immediately if it is a gift card, otherwise it will be refunded within 5 to 7 business days.\n\n### Modify items\n\nThis action can only be called once, and will change the order status to 'pending (items modifed)'. The agent will not be able to modify or cancel the order anymore. So you must confirm all the details are correct and be cautious before taking this action. In particular, remember to remind the customer to confirm they have provided all the items they want to modify.\n\nFor a pending order, each item can be modified to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.\n\nThe user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.\n\n## Return delivered order\n\nAn order can only be returned if its status is 'delivered', and you should check its status before taking the action.\n\nThe user needs to confirm the order id and the list of items to be returned.\n\nThe user needs to provide a payment method to receive the refund.\n\nThe refund must either go to the original payment method, or an existing gift card.\n\nAfter user confirmation, the order status will be changed to 'return requested', and the user will receive an email regarding how to return items.\n\n## Exchange delivered order\n\nAn order can only be exchanged if its status is 'delivered', and you should check its status before taking the action. In particular, remember to remind the customer to confirm they have provided all items to be exchanged.\n\nFor a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.\n\nThe user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.\n\nAfter user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order.\n</policy>"
+    }
+  ],
+  "user_scenario": {
+    "instructions": {
+      "domain": "retail",
+      "reason_for_call": "Customer wants to update all pending order addresses and default address to match an existing Washington DC address from their order history",
+      "known_info": "{\"name\": {\"first_name\": \"Rachel\", \"last_name\": \"Morris\"}, \"email\": \"rachel.morris8822@example.com\", \"order_ids\": [\"#W8046617\", \"#W1221555\", \"#W1657057\"], \"order_items\": [{\"order_id\": \"#W8046617\", \"item_id\": \"8573379326\", \"name\": \"Cycling Helmet\", \"options\": {\"size\": \"M\", \"color\": \"red\", \"ventilation\": \"high\"}}, {\"order_id\": \"#W1221555\", \"item_id\": \"7884173033\", \"name\": \"Portable Charger\", \"options\": {\"capacity\": \"10000mAh\", \"output\": \"USB-C\", \"color\": \"blue\"}}, {\"order_id\": \"#W1657057\", \"item_id\": \"3616838507\", \"name\": \"Mechanical Keyboard\", \"options\": {\"switch type\": \"tactile\", \"backlight\": \"white\", \"size\": \"full size\"}}]}",
+      "unknown_info": null,
+      "task_instructions": "**User Goals:**\n1) Customer wants to modify the shipping address on ALL their pending orders to use the Washington DC address that's already on one of their existing orders, and also update their default user address to this same address.\n\n**Details:**\n- Customer has 3 pending orders that need address updates\n- Customer references the address by city (Washington DC) rather than providing full address details\n- Customer expects agent to find the correct address from their order history\n- Customer also wants their default profile address updated to match\n- Customer authenticates via name and zip code\n\n**Constraints & Behavior:**\n[Pattern A] User behavior: User mentions all requests at once in their first message - they want to update all pending order addresses AND their default address to the Washington DC address from their order history.\n- User will NOT provide the full address details upfront\n- User references address as 'the Washington DC address' or 'the one on my order'\n- User expects agent to look up the address from existing orders\n- User confirms when agent lists the specific address found\n- User wants a comprehensive update: all 3 pending orders + default profile address"
+    }
+  },
+  "evaluation_criteria": {
+    "actions": [
+      {
+        "action_id": "retail_train_163_0",
+        "name": "find_user_id_by_email",
+        "arguments": {
+          "email": "rachel.morris8822@example.com"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_1",
+        "name": "get_user_details",
+        "arguments": {
+          "user_id": "rachel_morris_6444"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_2",
+        "name": "get_order_details",
+        "arguments": {
+          "order_id": "#W8046617"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_3",
+        "name": "get_order_details",
+        "arguments": {
+          "order_id": "#W1221555"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_4",
+        "name": "get_order_details",
+        "arguments": {
+          "order_id": "#W1657057"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_5",
+        "name": "modify_pending_order_address",
+        "arguments": {
+          "zip": "20500",
+          "country": "USA",
+          "address2": "Suite 200",
+          "city": "Washington",
+          "address1": "1600 Pennsylvania Ave",
+          "state": "DC",
+          "order_id": "#W1221555"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_6",
+        "name": "modify_pending_order_address",
+        "arguments": {
+          "zip": "20500",
+          "country": "USA",
+          "address2": "Suite 200",
+          "city": "Washington",
+          "address1": "1600 Pennsylvania Ave",
+          "state": "DC",
+          "order_id": "#W1657057"
+        },
+        "info": null
+      },
+      {
+        "action_id": "retail_train_163_7",
+        "name": "modify_user_address",
+        "arguments": {
+          "zip": "20500",
+          "country": "USA",
+          "address2": "Suite 200",
+          "city": "Washington",
+          "address1": "1600 Pennsylvania Ave",
+          "user_id": "rachel_morris_6444",
+          "state": "DC"
+        },
+        "info": null
+      }
+    ],
+    "communicate_info": []
+  },
+  "db_path": "tau2_rl_database/tau2_retail_new_db_3.json",
+  "dataset_version": "retail_full_v2",
+  "group": "rl:retail_145"
+}

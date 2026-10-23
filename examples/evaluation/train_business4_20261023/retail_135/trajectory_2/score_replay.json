@@ -1,0 +1,126 @@
+{
+  "task_id": "retail_135",
+  "session_id": 2,
+  "seed": 44,
+  "termination": "completed",
+  "diagnostic": null,
+  "assistant_actions": 11,
+  "generations": 12,
+  "format_retries": 1,
+  "business_tool_calls": 6,
+  "tool_errors": [],
+  "generated_tokens": 1111,
+  "customer_api_requests": 4,
+  "scores": {
+    "version": "business_subset_v2_us_country",
+    "task_id": "retail_135",
+    "termination": "completed",
+    "business_reward": 0.0,
+    "gate": 1.0,
+    "violations": [],
+    "goal_count": 1,
+    "completed_goals": [],
+    "progress": 0.0,
+    "reward_a": 0.0,
+    "reward_b": 0.0,
+    "partial_weight": 0.3,
+    "policy_scope": "identity_ownership_non_target_writes_protocol_only",
+    "training_business_reward": 0.0
+  },
+  "successful_write_targets": [],
+  "missing_goal_targets": [
+    [
+      "modify_pending_order_items",
+      "#W7926664"
+    ]
+  ],
+  "final_db_vs_reference": [
+    {
+      "path": "/orders/#W7926664/items",
+      "actual": [
+        {
+          "name": "Fleece Jacket",
+          "product_id": "8560156827",
+          "item_id": "4728397765",
+          "price": 149.48,
+          "options": {
+            "size": "M",
+            "color": "black",
+            "zipper": "full"
+          }
+        },
+        {
+          "name": "Running Shoes",
+          "product_id": "6938111410",
+          "item_id": "4153505238",
+          "price": 158.67,
+          "options": {
+            "size": "8",
+            "color": "red",
+            "material": "leather",
+            "sole": "EVA"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "name": "Fleece Jacket",
+          "product_id": "8560156827",
+          "item_id": "9385662952",
+          "price": 154.75,
+          "options": {
+            "size": "10",
+            "color": "white",
+            "material": "leather",
+            "sole": "EVA"
+          }
+        },
+        {
+          "name": "Running Shoes",
+          "product_id": "6938111410",
+          "item_id": "1775591963",
+          "price": 154.75,
+          "options": {
+            "size": "10",
+            "color": "white",
+            "material": "leather",
+            "sole": "EVA"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/orders/#W7926664/payment_history",
+      "actual": [
+        {
+          "transaction_type": "payment",
+          "amount": 308.15,
+          "payment_method_id": "credit_card_9182736"
+        }
+      ],
+      "expected": [
+        {
+          "transaction_type": "payment",
+          "amount": 308.15,
+          "payment_method_id": "credit_card_9182736"
+        },
+        {
+          "transaction_type": "payment",
+          "amount": 6.52000000000001,
+          "payment_method_id": "credit_card_9182736"
+        }
+      ]
+    },
+    {
+      "path": "/orders/#W7926664/status",
+      "actual": "pending",
+      "expected": "pending (item modified)"
+    }
+  ],
+  "exact_score_match": true,
+  "exact_tool_and_database_replay": true,
+  "unique_call_ids": true,
+  "raw_token_fidelity": true,
+  "trace_folder": "retail_135/trajectory_2",
+  "transcript": "retail_135/trajectory_2/完整对话与工具调用.txt"
+}
